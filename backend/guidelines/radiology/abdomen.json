@@ -1,0 +1,528 @@
+{
+  "version": "1.0",
+  "body_system": "abdomen",
+  "source": "ICMR Guidelines + ACR Appropriateness Criteria (India-adapted)",
+  "last_updated": "2024-01-01",
+  "scenarios": [
+    {
+      "id": "abd-001",
+      "title": "Acute Abdominal Pain (Undifferentiated)",
+      "clinical_conditions": ["acute abdomen", "acute abdominal pain", "undifferentiated abdominal pain", "surgical abdomen"],
+      "symptoms": ["acute abdominal pain", "abdominal pain", "tenderness", "guarding", "rigidity", "nausea", "vomiting", "fever"],
+      "tags": ["emergency", "abdomen", "acute", "surgical"],
+      "references": ["ACR AC Acute Abdominal Pain 2022", "ICMR Emergency Guidelines", "RCR Guidance"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound Abdomen & Pelvis",
+          "code": "USG-ABD-PELVIS",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line investigation. Evaluates gallbladder, liver, spleen, kidneys, free fluid, appendix (limited), and pelvic organs. Rapid, bedside feasible.",
+          "india_context": "Available at secondary/district hospital level. Preferred first-line, especially in females of reproductive age.",
+          "special_notes": "Limited by bowel gas in some cases. If USG inconclusive, proceed to CT.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen & Pelvis with contrast",
+          "code": "CT-ABD-PELVIS-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "10–15 mSv",
+          "rationale": "Most comprehensive evaluation of acute abdomen. Detects perforation, obstruction, appendicitis, vascular events, and solid organ pathology.",
+          "india_context": "Indicated when USG inconclusive or clinical severity warrants rapid diagnosis. Reduces unnecessary surgery.",
+          "special_notes": "Consider oral + IV contrast protocol for bowel detail.",
+          "contraindicated_if": ["contrast allergy", "severe renal failure (use non-contrast)", "pregnancy (use USG/MRI)"]
+        },
+        {
+          "modality": "Plain X-Ray Abdomen (Erect + Supine)",
+          "code": "XR-ABD-ERECT-SUPINE",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.7 mSv",
+          "rationale": "Quick, widely available. Detects pneumoperitoneum (free air under diaphragm), bowel obstruction (air-fluid levels), calculi.",
+          "india_context": "Available even at PHC level. Always include erect CXR for subdiaphragmatic free air.",
+          "special_notes": "Sensitivity for free air ~55%. CT is more accurate.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Abdomen & Pelvis",
+          "code": "MRI-ABD-PELVIS",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Alternative when CT contraindicated. Particularly useful in pregnancy for appendicitis workup.",
+          "india_context": "Preferred over CT in pregnancy. Limited availability at secondary level.",
+          "special_notes": null,
+          "contraindicated_if": ["pacemaker", "claustrophobia"]
+        }
+      ]
+    },
+    {
+      "id": "abd-002",
+      "title": "Suspected Acute Appendicitis",
+      "clinical_conditions": ["appendicitis", "acute appendicitis", "right iliac fossa pain", "rif pain"],
+      "symptoms": ["right iliac fossa pain", "rif tenderness", "mcburney point tenderness", "periumbilical pain migrating to rif", "fever", "nausea", "anorexia", "rebound tenderness"],
+      "tags": ["surgical", "appendicitis", "emergency", "rif"],
+      "references": ["ACR AC Suspected Appendicitis 2022", "ICMR Surgical Guidelines", "SonoSite EM Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound Abdomen & Pelvis",
+          "code": "USG-ABD-PELVIS",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line, especially in children and females. Avoids radiation. Sensitivity 75–90% in expert hands.",
+          "india_context": "Mandatory first step in paediatric patients and women of reproductive age. Graded compression technique.",
+          "special_notes": "Non-visualisation of appendix on USG does not exclude appendicitis. Proceed to CT if inconclusive.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen & Pelvis with contrast",
+          "code": "CT-ABD-PELVIS-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "10–15 mSv",
+          "rationale": "Highest sensitivity and specificity (>95%). Detects perforation, abscess, and alternative diagnoses.",
+          "india_context": "Recommended when USG inconclusive or clinical score is equivocal (Alvarado 5–6). Reduces negative appendicectomy rate.",
+          "special_notes": "Alvarado score >7: go to OT. Score 5–6: CT indicated.",
+          "contraindicated_if": ["pregnancy (use MRI or USG + clinical decision)", "contrast allergy"]
+        },
+        {
+          "modality": "MRI Abdomen & Pelvis",
+          "code": "MRI-ABD-PELVIS",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Preferred alternative in pregnancy. High sensitivity for appendicitis without radiation.",
+          "india_context": "Use when CT contraindicated (pregnancy). Requires 24/7 MRI access — consider availability.",
+          "special_notes": null,
+          "contraindicated_if": ["pacemaker"]
+        }
+      ]
+    },
+    {
+      "id": "abd-003",
+      "title": "Acute Cholecystitis / Biliary Colic",
+      "clinical_conditions": ["cholecystitis", "acute cholecystitis", "biliary colic", "gallstones", "cholelithiasis", "gallbladder disease"],
+      "symptoms": ["right upper quadrant pain", "ruq pain", "pain after fatty meal", "murphy sign", "fever", "jaundice", "nausea", "vomiting", "radiating to right shoulder"],
+      "tags": ["biliary", "gallbladder", "surgical", "gastrointestinal"],
+      "references": ["ACR AC Right Upper Quadrant Pain 2022", "EASL Gallstone Guidelines 2016", "ICMR GI Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound Abdomen",
+          "code": "USG-ABD",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Definitive first-line investigation. Detects gallstones (>95% sensitivity), wall thickening, pericholecystic fluid, CBD dilatation, Murphy sign.",
+          "india_context": "Widely available. Highly accurate for gallstones. Fasting for 4–6 hours improves gallbladder distension.",
+          "special_notes": "Includes assessment of CBD diameter. CBD >8 mm suggests choledocholithiasis.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen with contrast",
+          "code": "CT-ABD-CONTRAST",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "10–15 mSv",
+          "rationale": "For complications — gangrenous cholecystitis, perforation, pericholecystic abscess, Mirizzi syndrome.",
+          "india_context": "Use only if USG inconclusive or complications suspected.",
+          "special_notes": "CT detects emphysematous cholecystitis (gas in gallbladder wall) — surgical emergency.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        },
+        {
+          "modality": "MRCP (MR Cholangiopancreatography)",
+          "code": "MRCP",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For suspected choledocholithiasis (CBD stones). Non-invasive alternative to ERCP for diagnosis.",
+          "india_context": "Preferred non-invasive investigation for CBD stones before ERCP. Available at tertiary centres.",
+          "special_notes": "ERCP reserved for therapeutic intervention after MRCP confirmation.",
+          "contraindicated_if": ["pacemaker"]
+        },
+        {
+          "modality": "HIDA Scan (Hepatobiliary Scintigraphy)",
+          "code": "HIDA-SCAN",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "1–3 mSv",
+          "rationale": "For equivocal cholecystitis when USG inconclusive. Detects cystic duct obstruction (non-filling of gallbladder).",
+          "india_context": "Limited availability. Use only when diagnosis remains uncertain after USG and CT.",
+          "special_notes": null,
+          "contraindicated_if": ["pregnancy"]
+        }
+      ]
+    },
+    {
+      "id": "abd-004",
+      "title": "Suspected Renal / Ureteric Colic",
+      "clinical_conditions": ["renal colic", "ureteric colic", "kidney stone", "urolithiasis", "nephrolithiasis", "ureteric stone"],
+      "symptoms": ["loin to groin pain", "colicky flank pain", "haematuria", "microscopic haematuria", "nausea", "vomiting", "radiating pain groin", "inability to sit still"],
+      "tags": ["urological", "renal", "stone", "colic", "emergency"],
+      "references": ["EAU Urolithiasis Guidelines 2023", "ACR AC Renal Colic 2022", "ICMR Urology Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT KUB (Non-contrast CT Abdomen & Pelvis)",
+          "code": "CT-KUB-NON-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "3–5 mSv",
+          "rationale": "Gold standard. Detects nearly all stones (>95% sensitivity) including radiolucent uric acid stones missed on plain X-ray.",
+          "india_context": "Investigation of choice. Low-dose CT KUB protocol recommended to reduce radiation.",
+          "special_notes": "Also detects alternative diagnoses (appendicitis, aortic aneurysm). No contrast required for stones.",
+          "contraindicated_if": ["pregnancy (use USG)"]
+        },
+        {
+          "modality": "Ultrasound KUB",
+          "code": "USG-KUB",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line in pregnancy and paediatrics. Detects hydronephrosis and large renal stones well. Misses ureteric stones.",
+          "india_context": "Use as first-line in pregnant women. Widely available. Pair with X-ray KUB.",
+          "special_notes": "Sensitivity for ureteric stones only ~20–50%. CT preferred for definitive diagnosis.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "X-Ray KUB (Plain film)",
+          "code": "XR-KUB",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.6 mSv",
+          "rationale": "Detects radio-opaque stones (calcium oxalate, struvite). Useful for follow-up of known stones.",
+          "india_context": "Widely available, low cost. 20% of urinary stones are radiolucent (uric acid) and will be missed.",
+          "special_notes": "Uric acid and cystine stones not visible on plain X-ray.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Abdomen & Pelvis",
+          "code": "MRI-ABD-PELVIS",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Preferred in pregnancy when CT is contraindicated. Detects hydronephrosis and signs of obstruction.",
+          "india_context": "Use in pregnant women when USG inconclusive.",
+          "special_notes": "Cannot directly visualise most stones, but detects ureteric oedema and obstructive changes.",
+          "contraindicated_if": ["pacemaker"]
+        }
+      ]
+    },
+    {
+      "id": "abd-005",
+      "title": "Obstructive Jaundice",
+      "clinical_conditions": ["obstructive jaundice", "cholestatic jaundice", "biliary obstruction", "jaundice", "icterus"],
+      "symptoms": ["jaundice", "dark urine", "pale stools", "pruritus", "right upper quadrant pain", "weight loss", "anorexia"],
+      "tags": ["liver", "biliary", "jaundice", "gastrointestinal"],
+      "references": ["BSG Jaundice Guidelines", "ACR AC Jaundice 2022", "EASL Guidelines", "ICMR Liver Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound Abdomen",
+          "code": "USG-ABD",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line investigation. Identifies biliary dilation, gallstones, liver parenchymal disease, and mass lesions.",
+          "india_context": "Mandatory first step. Distinguishes obstructive from hepatocellular jaundice. Widely available.",
+          "special_notes": "CBD >8 mm suggests obstruction. Intrahepatic biliary dilation points to high obstruction.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRCP",
+          "code": "MRCP",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Non-invasive gold standard for biliary anatomy, CBD stones, strictures, and PSC. Equivalent to ERCP for diagnosis.",
+          "india_context": "Preferred over diagnostic ERCP. Available at tertiary care centres. No radiation.",
+          "special_notes": "Cannot be therapeutic. Proceed to ERCP only after diagnostic confirmation.",
+          "contraindicated_if": ["pacemaker"]
+        },
+        {
+          "modality": "CT Abdomen with contrast (triple phase)",
+          "code": "CT-ABD-TRIPHASIC",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "15–20 mSv",
+          "rationale": "For characterising pancreatic/biliary mass, hepatic metastases, vascular involvement — staging for resectability.",
+          "india_context": "Essential for surgical planning in suspected cholangiocarcinoma or pancreatic head carcinoma.",
+          "special_notes": "Triphasic protocol: arterial, portal venous, delayed phases for liver and pancreas.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        }
+      ]
+    },
+    {
+      "id": "abd-006",
+      "title": "Acute Pancreatitis",
+      "clinical_conditions": ["pancreatitis", "acute pancreatitis", "epigastric pain radiating to back"],
+      "symptoms": ["epigastric pain", "radiating to back", "nausea", "vomiting", "epigastric tenderness", "fever", "raised amylase", "raised lipase"],
+      "tags": ["pancreas", "gastrointestinal", "emergency", "surgical"],
+      "references": ["ACR AC Acute Pancreatitis 2022", "IAP/APA Pancreatitis Guidelines 2013", "ICMR GI Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound Abdomen",
+          "code": "USG-ABD",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line to identify gallstone aetiology (cholecystolithiasis, CBD stones). Detects peri-pancreatic fluid.",
+          "india_context": "Immediate USG to rule out gallstone pancreatitis — changes management.",
+          "special_notes": "Pancreas may be poorly visualised due to bowel gas in acute setting. CT is more definitive.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen with contrast (CECT)",
+          "code": "CT-ABD-CONTRAST",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "10–15 mSv",
+          "rationale": "For severity assessment (CTSI — CT Severity Index), necrosis detection, complications (abscess, pseudocyst, vascular).",
+          "india_context": "Perform at 48–72 hours in moderate-severe pancreatitis. Not needed in mild cases.",
+          "special_notes": "CTSI (Balthazar + Necrosis score) predicts morbidity and mortality. Avoid in first 48h (underestimates necrosis).",
+          "contraindicated_if": ["contrast allergy", "renal failure (risk of contrast nephropathy)"]
+        },
+        {
+          "modality": "MRI / MRCP",
+          "code": "MRI-MRCP",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Alternative to CT for severity staging, especially for detecting duct disruption and CBD stones without radiation.",
+          "india_context": "Use when CT contraindicated. MRCP identifies bile duct stones or strictures.",
+          "special_notes": null,
+          "contraindicated_if": ["pacemaker"]
+        },
+        {
+          "modality": "Plain X-Ray Abdomen",
+          "code": "XR-ABD",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.7 mSv",
+          "rationale": "Limited value in pancreatitis. May show sentinel loop, colon cut-off sign, or calcification in chronic disease.",
+          "india_context": "Perform to exclude perforation/obstruction initially. Not diagnostic for pancreatitis.",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "abd-007",
+      "title": "Hepatic Mass / Suspected Hepatocellular Carcinoma (HCC)",
+      "clinical_conditions": ["hepatic mass", "hepatocellular carcinoma", "hcc", "liver mass", "liver tumour", "hepatoma", "liver metastasis"],
+      "symptoms": ["right hypochondrial pain", "weight loss", "jaundice", "abdominal mass", "hepatomegaly", "cirrhosis with new mass", "elevated afp", "ascites"],
+      "tags": ["liver", "hcc", "hepatic", "malignancy", "cirrhosis", "mass"],
+      "references": ["EASL HCC Guidelines 2022", "ICMR Cancer Guidelines", "ACR AC Liver Mass", "ISCCM India Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound Abdomen (with Doppler)",
+          "code": "USG-ABDOMEN-DOPPLER",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line surveillance and initial characterisation. Identifies hepatic mass, portal vein thrombosis, cirrhosis features, and ascites. Doppler for vascularity.",
+          "india_context": "HBV and HCV-related cirrhosis are major HCC risk factors in India. Ultrasound surveillance every 6 months is recommended for all cirrhotic patients. AFP combined with ultrasound for screening.",
+          "special_notes": "Surveillance US in cirrhosis: every 6 months. Any new nodule >1 cm in cirrhotic liver needs CT/MRI for characterisation (LI-RADS).",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen — Dynamic Multiphase (LI-RADS protocol)",
+          "code": "CT-LIVER-MULTIPHASIC",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "15–20 mSv",
+          "rationale": "Standard for HCC diagnosis and staging. Arterial hyperenhancement with portal venous washout is diagnostic (LI-RADS ≥4). Non-invasive diagnosis of HCC possible in cirrhotic liver.",
+          "india_context": "Most cost-effective diagnostic tool for HCC in India. LI-RADS classification used at oncology centres. Evaluate portal vein, hepatic veins, and adjacent structures for resectability.",
+          "special_notes": "LI-RADS criteria: arterial phase hyperenhancement + washout + capsule = LI-RADS 5 = definite HCC. LIRADS 3-4 may need biopsy.",
+          "contraindicated_if": ["contrast allergy", "severe renal failure (eGFR <30)"]
+        },
+        {
+          "modality": "MRI Abdomen (Hepatobiliary protocol with EOB/Primovist)",
+          "code": "MRI-LIVER-HBP",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Most sensitive for HCC detection, especially small lesions (<2 cm). Hepatobiliary phase (EOB-MRI) with hypointense defect is highly specific for HCC. Superior to CT for indeterminate lesions.",
+          "india_context": "Available at large hepatology and oncology centres. EOB-Primovist (gadoxetate) is the preferred agent. Used for surgical planning and transplant eligibility assessment.",
+          "special_notes": "DWI restricted diffusion + arterial enhancement + HBP hypointensity = HCC. Best tool for detecting multifocal small HCCs before transplant listing.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "severe renal failure (gadolinium)"]
+        },
+        {
+          "modality": "CT Chest for staging",
+          "code": "CT-CHEST-STAGING",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "HCC most commonly metastasises to lung. CT chest is essential for staging before surgical resection or liver transplantation evaluation.",
+          "india_context": "Lung and bone are common metastatic sites. Complete BCLC staging requires chest CT.",
+          "special_notes": null,
+          "contraindicated_if": ["contrast allergy"]
+        }
+      ]
+    },
+    {
+      "id": "abd-008",
+      "title": "Acute Intestinal Obstruction",
+      "clinical_conditions": ["intestinal obstruction", "bowel obstruction", "small bowel obstruction", "large bowel obstruction", "sbo", "lbo", "volvulus", "intussusception"],
+      "symptoms": ["colicky abdominal pain", "abdominal distension", "vomiting", "constipation", "absolute constipation", "tinkle bowel sounds", "inability to pass flatus"],
+      "tags": ["abdomen", "obstruction", "bowel", "emergency", "volvulus"],
+      "references": ["EAST Bowel Obstruction Guidelines", "ACR AC Small Bowel Obstruction", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "X-Ray Abdomen (Erect and Supine)",
+          "code": "XRAY-ABDOMEN-ERECT",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.5–1 mSv",
+          "rationale": "First-line investigation. Multiple air-fluid levels, dilated bowel loops, paucity of gas distally. Erect view shows fluid levels; supine shows distribution. Rapid, cheap, and widely available.",
+          "india_context": "Mandatory first investigation in all bowel obstruction in India. Sigmoid volvulus is extremely common in India (high-fibre diet, elderly) — coffee bean sign on X-ray is diagnostic.",
+          "special_notes": "SBO: Dilated small bowel (>3 cm) with air-fluid levels in stepladder pattern. LBO: Dilated large bowel (>6 cm, caecum >9 cm). Sigmoid volvulus: inverted U-loop, coffee bean sign.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen/Pelvis with contrast",
+          "code": "CT-ABDOMEN-PELVIS",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "Definitive investigation for cause, level, and complications (strangulation, ischaemia, perforation). Identifies transition point, hernia, adhesions, malignancy, and closed-loop obstruction.",
+          "india_context": "CT is preferred when diagnosis is in doubt or surgery is planned. Identifies mesenteric ischaemia (high mortality if missed). Colonic carcinoma is a common cause of LBO in India.",
+          "special_notes": "Closed-loop obstruction: C/U-shaped loop with tapered ends and mesenteric swirl — surgical emergency. Pneumatosis intestinalis = ischaemia.",
+          "contraindicated_if": ["contrast allergy", "perforation (use water-soluble contrast or non-contrast)", "renal failure"]
+        },
+        {
+          "modality": "Ultrasound Abdomen",
+          "code": "USG-ABDOMEN",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Can detect dilated loops, peristalsis, and hernia in selected cases. Limited by bowel gas in obstruction. Useful in pregnant patients.",
+          "india_context": "Available everywhere. Use in pregnancy as first-line. Otherwise CT is preferred.",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "abd-009",
+      "title": "Lower GI Bleeding",
+      "clinical_conditions": ["lower gi bleeding", "rectal bleeding", "haematochezia", "pr bleeding", "per rectal bleeding", "melena", "colonic bleeding"],
+      "symptoms": ["rectal bleeding", "haematochezia", "bright red blood per rectum", "melena", "dark stools", "abdominal pain with bleeding", "anaemia", "hypotension"],
+      "tags": ["abdomen", "GI bleed", "rectal", "haematochezia", "colon", "diverticular"],
+      "references": ["BSG GI Bleeding Guidelines 2019", "ACR AC Lower GI Bleeding", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Angiography Abdomen/Pelvis (CTA Mesenteric)",
+          "code": "CTA-MESENTERIC",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "For active GI bleeding in haemodynamically unstable patients or when endoscopy is non-diagnostic. Detects bleeding >0.3 mL/min. Identifies site for targeted embolisation or surgery.",
+          "india_context": "Diverticular disease, angiodysplasia, and colorectal carcinoma are common causes in India. CTA is first-line for brisk lower GI bleeding.",
+          "special_notes": "Perform during active bleeding for maximum sensitivity. Identifies bleeding site for selective mesenteric angiography and embolisation.",
+          "contraindicated_if": ["contrast allergy", "severe renal failure", "haemodynamically unstable requiring immediate surgery"]
+        },
+        {
+          "modality": "Conventional Mesenteric Angiography (DSA)",
+          "code": "DSA-MESENTERIC",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "10–15 mSv",
+          "rationale": "Gold standard for active brisk lower GI bleeding — allows simultaneous diagnosis and treatment (embolisation). Detects bleeding >0.5 mL/min.",
+          "india_context": "Available at interventional radiology centres in India. Superselective embolisation can stop bleeding with <5% bowel ischaemia risk.",
+          "special_notes": "Can treat bleeding with coil, gel-foam, or n-butyl cyanoacrylate embolisation. Requires active bleeding at time of procedure.",
+          "contraindicated_if": ["contrast allergy", "coagulopathy (correct INR <1.5 before procedure)"]
+        },
+        {
+          "modality": "99mTc-RBC Scintigraphy (Labelled Red Cell Scan)",
+          "code": "RBC-SCAN",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "1–3 mSv",
+          "rationale": "Detects intermittent or slow GI bleeding (>0.1 mL/min). Can detect bleeding over 24 hours and localise site before angiography. Useful when bleeding is too slow for CTA/DSA.",
+          "india_context": "Available at nuclear medicine centres. Useful for obscure GI bleeding workup.",
+          "special_notes": "High sensitivity for slow bleeding but poor spatial localisation. Use to confirm active bleeding before angiography.",
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "abd-010",
+      "title": "Amoebic Liver Abscess / Tropical Pyogenic Liver Abscess",
+      "clinical_conditions": ["amoebic liver abscess", "pyogenic liver abscess", "tropical liver abscess", "entamoeba histolytica", "liver abscess"],
+      "symptoms": ["right hypochondrial pain", "fever", "tender hepatomegaly", "anorexia", "weight loss", "referred right shoulder tip pain", "intercostal tenderness"],
+      "tags": ["liver", "abscess", "tropical", "amoeba", "infection", "india"],
+      "references": ["ICMR Tropical Disease Guidelines", "WHO Amoebic Disease Guidelines", "ACR AC Liver Abscess"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound Abdomen (with Doppler)",
+          "code": "USG-ABDOMEN",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line investigation. Identifies abscess cavity, size, location, echogenicity, and wall features. Also guides percutaneous aspiration/drainage. Amoebic abscess appears as round, well-defined hypoechoic mass.",
+          "india_context": "Amoebic liver abscess is among the most common causes of liver abscess in tropical India. Often presents with fever, right hypochondrial pain in young males. Serology (IHA/ELISA) confirms amoebic aetiology. Right lobe most common.",
+          "special_notes": "Amoebic: single, right lobe, peripheral, hypoechoic. Pyogenic: may be multiple, septated. Aspiration if >10 cm or failing to respond in 72 hours.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen with contrast",
+          "code": "CT-ABDOMEN-CONTRAST",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–10 mSv",
+          "rationale": "For complex or multiloculated abscesses, uncertain diagnosis, suspected complications (rupture into pleura, pericardium), or when ultrasound is limited.",
+          "india_context": "CT is used when the abscess is large, rupture is suspected, or there are multiple abscesses suggesting pyogenic aetiology. Complications (pleural empyema, pericarditis) require CT.",
+          "special_notes": "Rim-enhancing hypoattenuating mass with perilesional oedema. Intraabdominal rupture: free fluid, peritonitis.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        },
+        {
+          "modality": "X-Ray Chest and Abdomen",
+          "code": "XRAY-CXR-ABDOMEN",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.5 mSv",
+          "rationale": "Right dome of diaphragm elevation, right pleural effusion, and hepatomegaly may suggest liver abscess. Useful to screen for complications.",
+          "india_context": "Simple, available, and quick. Elevated right hemidiaphragm is an important early sign of liver abscess.",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    }
+  ]
+}

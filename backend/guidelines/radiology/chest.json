@@ -1,0 +1,564 @@
+{
+  "version": "1.0",
+  "body_system": "chest",
+  "source": "ICMR Guidelines + ACR Appropriateness Criteria (India-adapted)",
+  "last_updated": "2024-01-01",
+  "scenarios": [
+    {
+      "id": "chest-001",
+      "title": "Suspected Pulmonary Tuberculosis",
+      "clinical_conditions": ["pulmonary tuberculosis", "tb", "tuberculosis", "suspected tb", "open tb"],
+      "symptoms": ["cough", "haemoptysis", "hemoptysis", "weight loss", "night sweats", "fever", "evening rise of temperature", "anorexia", "breathlessness", "productive cough"],
+      "tags": ["infectious", "respiratory", "tb", "pulmonary", "nikshay"],
+      "references": ["ICMR TB Guidelines 2019", "RNTCP/NTEP Programme", "ACR AC Pulmonary TB 2022", "IRIA Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "First-line and mandatory investigation for all presumptive TB cases. Identifies cavities, infiltrates, consolidation, and pleural effusion consistent with TB.",
+          "india_context": "Required under NTEP/NIKSHAY protocol. Available at all levels of healthcare including PHCs. Low cost and widely accessible.",
+          "special_notes": "Bilateral upper lobe involvement, cavitation, or miliary pattern are characteristic. Normal CXR does not exclude TB.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Chest (HRCT)",
+          "code": "CT-CHEST-HRCT",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "Indicated when CXR is normal but clinical suspicion remains high (sputum-negative cases), for extent of disease, or to differentiate from other pathology.",
+          "india_context": "Reserve for complicated or diagnostically unclear cases. Consider radiation burden, especially in young patients.",
+          "special_notes": "Tree-in-bud pattern, centrilobular nodules, and cavities are highly suggestive of active TB.",
+          "contraindicated_if": ["pregnancy (use with caution, shield abdomen)"]
+        },
+        {
+          "modality": "Ultrasound Chest (pleural)",
+          "code": "USG-PLEURAL",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For evaluation and guided aspiration of pleural effusion. Useful in pregnancy as no radiation exposure.",
+          "india_context": "Preferred in pregnant patients or for guiding diagnostic/therapeutic pleural tap.",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Chest with contrast",
+          "code": "CT-CHEST-CONTRAST",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "May be needed to characterise mediastinal lymphadenopathy or rule out complications like empyema necessitans.",
+          "india_context": "Use HRCT first; add contrast only if specific mediastinal or vascular involvement is suspected.",
+          "special_notes": "Check renal function before contrast. Avoid in contrast allergy.",
+          "contraindicated_if": ["contrast allergy", "renal failure (eGFR < 30)"]
+        },
+        {
+          "modality": "MRI Chest",
+          "code": "MRI-CHEST",
+          "rating": 3,
+          "appropriateness": "usually_not_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Not routinely indicated for pulmonary TB. Limited by respiratory motion artefacts.",
+          "india_context": "Costly and not widely available. Reserve for spinal/pericardial TB evaluation.",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "PET-CT",
+          "code": "PET-CT",
+          "rating": 2,
+          "appropriateness": "usually_not_appropriate",
+          "radiation_level": "high",
+          "radiation_msv_range": "14–25 mSv",
+          "rationale": "Not indicated for routine TB diagnosis. TB lesions are FDG-avid and can mimic malignancy.",
+          "india_context": "Not recommended for TB workup. Only consider if malignancy co-exists and cannot be excluded.",
+          "special_notes": null,
+          "contraindicated_if": ["pregnancy", "uncontrolled diabetes"]
+        }
+      ]
+    },
+    {
+      "id": "chest-002",
+      "title": "Community-Acquired Pneumonia (CAP)",
+      "clinical_conditions": ["pneumonia", "community acquired pneumonia", "cap", "lobar pneumonia", "bronchopneumonia"],
+      "symptoms": ["fever", "cough", "productive cough", "breathlessness", "chest pain", "tachypnoea", "crackles", "purulent sputum"],
+      "tags": ["respiratory", "infection", "pneumonia", "cap"],
+      "references": ["ICMR CAP Guidelines", "BTS CAP Guidelines 2009", "ACR AC Pneumonia 2022", "IDSA/ATS Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "Essential for diagnosis, extent, severity assessment (CURB-65), and to identify complications (effusion, abscess).",
+          "india_context": "Mandatory first investigation. Guides antibiotic choice and decision to admit. Follow-up CXR at 6 weeks to exclude underlying malignancy.",
+          "special_notes": "AP view acceptable if PA not feasible. Repeat CXR at 6 weeks if patient >40 years or smoker to rule out malignancy.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Ultrasound Chest (pleural)",
+          "code": "USG-PLEURAL",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For detecting and quantifying parapneumonic effusion, guiding diagnostic/therapeutic aspiration.",
+          "india_context": "Preferred over CT for effusion assessment. No radiation, bedside feasible.",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Chest (with or without contrast)",
+          "code": "CT-CHEST",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "Indicated if CXR is non-diagnostic, clinical deterioration despite treatment, or suspicion of complication (abscess, empyema, malignancy).",
+          "india_context": "Do not use routinely. Reserve for complicated or non-resolving pneumonia.",
+          "special_notes": "CT is more sensitive than CXR for early infiltrates and complications.",
+          "contraindicated_if": ["contrast allergy (use non-contrast)", "pregnancy (shield)"]
+        },
+        {
+          "modality": "MRI Chest",
+          "code": "MRI-CHEST",
+          "rating": 2,
+          "appropriateness": "usually_not_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Not indicated for routine CAP evaluation.",
+          "india_context": "Not recommended. Use CXR or CT.",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "chest-003",
+      "title": "Suspected Lung Cancer / Pulmonary Mass",
+      "clinical_conditions": ["lung cancer", "lung mass", "pulmonary nodule", "pulmonary mass", "suspected malignancy lung", "bronchogenic carcinoma"],
+      "symptoms": ["haemoptysis", "hemoptysis", "weight loss", "cough", "hoarseness", "chest pain", "incidental nodule", "superior vena cava syndrome", "clubbing"],
+      "tags": ["oncology", "respiratory", "cancer", "mass", "nodule"],
+      "references": ["ICMR Cancer Guidelines", "ACR Lung-RADS", "ACR AC Lung Cancer 2022", "NCCN Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Chest with contrast",
+          "code": "CT-CHEST-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "Gold standard for characterising pulmonary mass — size, margins, density, enhancement, lymphadenopathy, and staging.",
+          "india_context": "Essential before any further workup or biopsy planning. Should include chest + upper abdomen.",
+          "special_notes": "Extend scan to include adrenals and liver for initial staging. Use thin slices (1–1.5 mm).",
+          "contraindicated_if": ["contrast allergy", "severe renal impairment"]
+        },
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "Initial investigation and for surveillance. May miss lesions <1 cm or in hidden areas.",
+          "india_context": "Always start with CXR. Low cost, widely available.",
+          "special_notes": "If CXR abnormal, proceed to CT. Normal CXR does not exclude small or central lesions.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "PET-CT",
+          "code": "PET-CT",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "high",
+          "radiation_msv_range": "14–25 mSv",
+          "rationale": "Staging — detects mediastinal nodal involvement, distant metastases. Guides resectability assessment.",
+          "india_context": "Use for staging after tissue diagnosis, not for initial diagnosis. Available in tier-1 cities.",
+          "special_notes": "False positives in TB/granulomatous disease (common in India). Interpret with caution.",
+          "contraindicated_if": ["uncontrolled diabetes (affects FDG uptake)", "pregnancy"]
+        },
+        {
+          "modality": "MRI Chest",
+          "code": "MRI-CHEST",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For chest wall, mediastinal, or superior sulcus (Pancoast) tumour assessment. Better soft tissue delineation.",
+          "india_context": "Use selectively for specific indications.",
+          "special_notes": null,
+          "contraindicated_if": ["pacemaker (check MRI safety)"]
+        },
+        {
+          "modality": "Ultrasound Chest",
+          "code": "USG-CHEST",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For peripheral masses abutting pleura — can guide biopsy.",
+          "india_context": "Useful for USG-guided biopsy of peripheral lesions.",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "chest-004",
+      "title": "Suspected Pulmonary Embolism (PE)",
+      "clinical_conditions": ["pulmonary embolism", "pe", "dvt", "deep vein thrombosis", "pulmonary thromboembolism"],
+      "symptoms": ["breathlessness", "chest pain", "haemoptysis", "tachycardia", "hypoxia", "syncope", "pleuritic chest pain", "calf swelling", "sudden breathlessness"],
+      "tags": ["vascular", "emergency", "pulmonary embolism", "thrombosis"],
+      "references": ["ESC PE Guidelines 2019", "ACR AC Suspected PE 2022", "BTS PE Guidelines", "ICMR DVT Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Pulmonary Angiography (CTPA)",
+          "code": "CTPA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–10 mSv",
+          "rationale": "Gold standard for diagnosis. Directly visualises thrombus in pulmonary arteries. Rapid, widely available.",
+          "india_context": "First-line definitive investigation in haemodynamically stable patients with intermediate/high pre-test probability.",
+          "special_notes": "Use WELLS or Geneva score for pre-test probability. Avoid in contrast allergy or severe renal failure.",
+          "contraindicated_if": ["contrast allergy", "severe renal failure", "haemodynamic instability (use bedside echo first)"]
+        },
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "Initial investigation to exclude other diagnoses (pneumothorax, pneumonia). Usually normal or non-specific in PE.",
+          "india_context": "Always obtain as first step. Westermark sign, Hampton's hump are classic but rare.",
+          "special_notes": "Normal CXR with hypoxia in a breathless patient should raise PE suspicion.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Echocardiography (TTE)",
+          "code": "ECHO-TTE",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Bedside assessment of right heart strain in haemodynamically unstable patients. May show thrombus in main PA.",
+          "india_context": "Use as first-line in ICU/emergency setting when patient is too unstable for CTPA.",
+          "special_notes": "Normal echo does not exclude PE. Use to risk stratify confirmed PE.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "VQ Scan (Ventilation-Perfusion)",
+          "code": "VQ-SCAN",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "1–2 mSv",
+          "rationale": "Alternative when CTPA is contraindicated. Preferred in pregnancy (lower fetal radiation than CTPA).",
+          "india_context": "Use when contrast is contraindicated or in pregnancy. Requires normal CXR for interpretation.",
+          "special_notes": "Low specificity in patients with underlying lung disease.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Pulmonary Angiography",
+          "code": "MRI-PA",
+          "rating": 4,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Alternative to CTPA when contrast is contraindicated and VQ scan not available. Technical challenges limit reliability.",
+          "india_context": "Not widely available. Use only in specialized centres.",
+          "special_notes": null,
+          "contraindicated_if": ["pacemaker", "claustrophobia"]
+        }
+      ]
+    },
+    {
+      "id": "chest-005",
+      "title": "Chest Trauma (Blunt / Penetrating)",
+      "clinical_conditions": ["chest trauma", "rib fracture", "pneumothorax trauma", "haemothorax", "blunt chest trauma", "road traffic accident chest"],
+      "symptoms": ["chest pain after trauma", "breathlessness", "decreased breath sounds", "hypotension", "mechanism injury", "seat belt sign"],
+      "tags": ["trauma", "emergency", "chest", "rib", "pneumothorax"],
+      "references": ["ATLS Protocol", "ACR AC Chest Trauma 2022", "ICMR Trauma Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Chest with contrast",
+          "code": "CT-CHEST-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "Most sensitive for rib fractures, pneumothorax, haemothorax, aortic injury, pulmonary contusion. Superior to CXR.",
+          "india_context": "Should be done in all significant chest trauma. Include CT angiography if aortic injury suspected.",
+          "special_notes": "Part of trauma CT whole body protocol (polytrauma). Use MDCT.",
+          "contraindicated_if": ["haemodynamic instability (stabilise first)"]
+        },
+        {
+          "modality": "Chest X-Ray (AP/PA view)",
+          "code": "CXR-AP",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "First-line portable investigation in trauma bay. Identifies pneumothorax, haemothorax, mediastinal widening.",
+          "india_context": "Immediate portable AP CXR as part of primary survey in all trauma patients.",
+          "special_notes": "AP supine view may miss up to 50% of pneumothoraces. Follow with CT.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Ultrasound (FAST / eFAST)",
+          "code": "USG-FAST",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Bedside — detects pneumothorax (eFAST), haemothorax, pericardial tamponade rapidly.",
+          "india_context": "Integral part of trauma assessment. Faster than CT for unstable patients.",
+          "special_notes": "eFAST: Extended FAST includes lung sliding assessment for pneumothorax.",
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "chest-006",
+      "title": "Pleural Effusion (Unknown Aetiology)",
+      "clinical_conditions": ["pleural effusion", "unilateral pleural effusion", "bilateral pleural effusion", "exudative effusion", "transudative effusion"],
+      "symptoms": ["breathlessness", "dullness to percussion", "reduced breath sounds", "weight loss", "fever", "orthopnoea"],
+      "tags": ["pleural", "effusion", "respiratory", "chest"],
+      "references": ["BTS Pleural Disease Guidelines 2010", "ACR AC Pleural Effusion", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "First-line. Detects effusion >200 mL. Identifies laterality, associated lung/mediastinal pathology.",
+          "india_context": "Start with CXR. Always include PA and lateral views.",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Ultrasound Chest (pleural)",
+          "code": "USG-PLEURAL",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Best for quantification, characterisation (simple/complex/septated), and guiding aspiration/biopsy. More sensitive than CXR.",
+          "india_context": "Preferred guidance tool for all pleural procedures. No radiation.",
+          "special_notes": "Can detect effusions as small as 20 mL. Identifies pleural thickening and nodularity.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Chest with contrast",
+          "code": "CT-CHEST-CONTRAST",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "For determining underlying cause — pleural malignancy, empyema, mediastinal pathology, underlying lung disease.",
+          "india_context": "Order after initial USG-guided tap and fluid analysis. Critical for excluding malignancy.",
+          "special_notes": "Best done after drainage for better lung visualisation.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        }
+      ]
+    },
+    {
+      "id": "chest-007",
+      "title": "Spontaneous Pneumothorax",
+      "clinical_conditions": ["pneumothorax", "spontaneous pneumothorax", "tension pneumothorax", "primary spontaneous pneumothorax", "secondary spontaneous pneumothorax"],
+      "symptoms": ["sudden pleuritic chest pain", "dyspnoea", "reduced breath sounds", "tracheal deviation", "hypoxia", "decreased air entry", "tachycardia"],
+      "tags": ["respiratory", "chest", "pneumothorax", "emergency", "pleura"],
+      "references": ["BTS Pleural Guidelines 2023", "ACR AC Pneumothorax", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Chest X-Ray (PA / AP erect)",
+          "code": "CXR-PA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "First-line and sufficient for diagnosis in most cases. PA erect shows visceral pleural line, lung edge, and contralateral tracheal deviation in tension pneumothorax. Quantifies size.",
+          "india_context": "Available everywhere. Tall, thin young males most commonly affected (primary). In India, secondary pneumothorax from TB cavitation is also common. Never delay treatment for imaging in tension pneumothorax.",
+          "special_notes": "BTS size: Small <2 cm rim, Large ≥2 cm rim. Tension pneumothorax is a clinical diagnosis — treat before imaging if haemodynamically compromised.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Chest (HRCT / Low dose)",
+          "code": "CT-CHEST-HRCT",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "1–3 mSv (low dose)",
+          "rationale": "Detects underlying blebs/bullae (secondary cause), occult pneumothorax not visible on CXR, and complications. Essential before surgical intervention (VATS pleurodesis).",
+          "india_context": "CT is recommended before VATS in India. Also identifies underlying TB or COPD as secondary causes.",
+          "special_notes": "Identify number, size, and location of blebs/bullae for surgical planning. Also detects contra-lateral lesions.",
+          "contraindicated_if": ["tension pneumothorax requiring immediate drainage"]
+        },
+        {
+          "modality": "Ultrasound Chest (POCUS)",
+          "code": "USG-CHEST-POCUS",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Bedside point-of-care ultrasound is highly sensitive for pneumothorax. Absent lung sliding + absent B-lines + lung point sign is diagnostic. Faster than CXR in ICU/emergency.",
+          "india_context": "POCUS increasingly adopted in Indian emergency departments and ICUs. Ideal for ventilated ICU patients where CXR is suboptimal.",
+          "special_notes": "Sensitivity >90% with POCUS. Lung point sign is pathognomonic. M-mode: stratosphere sign (no lung sliding) vs seashore sign (normal).",
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "chest-008",
+      "title": "Mediastinal Mass",
+      "clinical_conditions": ["mediastinal mass", "mediastinal tumour", "thymoma", "lymphoma mediastinum", "germ cell tumour mediastinum", "anterior mediastinal mass", "posterior mediastinal mass"],
+      "symptoms": ["dyspnoea", "chest pain", "stridor", "cough", "SVC syndrome", "facial swelling", "dysphagia", "hoarseness", "weight loss", "fever", "incidental mediastinal mass"],
+      "tags": ["chest", "mediastinum", "mass", "tumour", "thymoma", "lymphoma"],
+      "references": ["ACCP Mediastinal Mass Guidelines", "ACR AC Mediastinal Mass", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Chest with contrast",
+          "code": "CT-CHEST-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "First-line for mediastinal mass characterisation. Identifies location (anterior/middle/posterior), density (solid, cystic, fat, calcification), vascularity, and relationship to adjacent structures.",
+          "india_context": "Anterior mediastinal masses: 4 Ts — Thymoma, Teratoma, Terrible lymphoma, Thyroid. Lymphoma is most common in young Indian adults. TB lymphadenopathy (middle mediastinum) also common.",
+          "special_notes": "4Ts rule: Anterior — Thymoma, T-cell lymphoma, Teratoma/GCT, Thyroid. Middle — lymphoma, TB, bronchogenic cysts. Posterior — neurogenic tumours (Schwannoma, Neuroblastoma).",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        },
+        {
+          "modality": "MRI Chest / Mediastinum",
+          "code": "MRI-CHEST",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Superior for posterior mediastinal neurogenic tumours (spinal canal extension), vascular masses, and in children to avoid radiation. Better soft tissue characterisation than CT.",
+          "india_context": "Use for neurogenic tumours (Schwannoma, ganglioneuroma) to assess spinal canal involvement. Preferred in children.",
+          "special_notes": "T1/T2 characterisation: Lipoma (T1 bright), Cyst (T2 bright), Fibrous tissue (T2 dark). DWI for lymphoma (restricted diffusion).",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        },
+        {
+          "modality": "PET-CT (FDG)",
+          "code": "PET-CT-FDG",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "Essential for lymphoma staging and post-treatment response assessment (Deauville criteria). Helps distinguish lymphoma from thymoma in anterior mediastinal masses.",
+          "india_context": "Available at major oncology centres. Lymphoma is very common in young Indian adults. FDG PET is standard for lymphoma staging.",
+          "special_notes": "Very high FDG uptake = lymphoma or aggressive tumour. Low/absent uptake = thymoma, teratoma, or benign lesion.",
+          "contraindicated_if": ["uncontrolled diabetes", "pregnancy"]
+        }
+      ]
+    },
+    {
+      "id": "chest-009",
+      "title": "Empyema / Complicated Parapneumonic Effusion",
+      "clinical_conditions": ["empyema", "empyema thoracis", "complicated parapneumonic effusion", "pyothorax", "pleural infection"],
+      "symptoms": ["fever", "pleuritic chest pain", "dyspnoea", "cough", "reduced breath sounds", "dullness on percussion", "failure to improve after pneumonia treatment", "sepsis"],
+      "tags": ["chest", "pleura", "empyema", "infection", "effusion", "drainage"],
+      "references": ["BTS Pleural Infection Guidelines 2023", "IDSA Pleural Guidelines", "ACR AC Pleural Effusion", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "First-line assessment. Identifies effusion, consolidation, and hydropneumothorax. Loculation may appear as D-shaped opacity not shifting on decubitus view.",
+          "india_context": "TB is the most common cause of pleural empyema in India. Post-pneumonic empyema also common. Prompt diagnosis and drainage are critical.",
+          "special_notes": "Lateral decubitus view helps assess free vs loculated effusion. Failure to layer out on decubitus = loculated.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Ultrasound Chest (with guidance for drainage)",
+          "code": "USG-CHEST-GUIDED",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Real-time guidance for thoracocentesis and chest drain placement. Identifies septations, echogenic debris (exudate/pus), and guides needle trajectory. Superior to CT for procedural guidance.",
+          "india_context": "First-line for all pleural procedures in India. Reduces complications of blind thoracocentesis. Portable ultrasound available in most Indian hospitals.",
+          "special_notes": "Septated/echogenic fluid = exudate/empyema. Anechoic free-flowing = transudate. US-guided drain placed in most echogenic, most accessible location.",
+          "contraindicated_if": ["coagulopathy (INR >1.5 — correct before drainage)"]
+        },
+        {
+          "modality": "CT Chest with contrast",
+          "code": "CT-CHEST-CONTRAST",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "For complex or multiloculated empyema, failed drainage, or when surgical decortication is planned. Shows split pleura sign, loculations, thickened enhancing pleura, and underlying lung.",
+          "india_context": "CT is essential before surgical decortication. Also helps identify fistula (bronchopleural fistula) and underlying TB or malignancy.",
+          "special_notes": "Split pleura sign (enhancing visceral and parietal pleura separated by fluid) is characteristic of empyema. Identifies loculations not amenable to simple drainage.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        }
+      ]
+    },
+    {
+      "id": "chest-010",
+      "title": "Diffuse Parenchymal Lung Disease / Interstitial Lung Disease (ILD)",
+      "clinical_conditions": ["interstitial lung disease", "ild", "pulmonary fibrosis", "ipf", "idiopathic pulmonary fibrosis", "sarcoidosis", "hypersensitivity pneumonitis", "connective tissue disease lung"],
+      "symptoms": ["progressive dyspnoea", "dry cough", "clubbing", "bibasilar crepitations", "reduced exercise tolerance", "desaturation on exertion", "constitutional symptoms"],
+      "tags": ["respiratory", "chest", "ILD", "fibrosis", "interstitial", "sarcoidosis"],
+      "references": ["ATS/ERS ILD Guidelines 2022", "ACR AC Diffuse Lung Disease", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "Initial investigation. Identifies distribution (upper, lower, bilateral), honeycombing, reticular opacities, ground-glass, and pleural changes. Normal CXR does not exclude early ILD.",
+          "india_context": "Sarcoidosis presenting as bilateral hilar lymphadenopathy and ILD is common in India. Silicosis from mining and stone-cutting is an occupational ILD prevalent in specific regions.",
+          "special_notes": "Bilateral lower lobe fibrosis = UIP (IPF). Upper lobe = sarcoidosis, HP, silicosis. Mid-zone = NSIP.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "HRCT Chest (High-Resolution CT)",
+          "code": "CT-CHEST-HRCT",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "1–3 mSv (low dose HRCT)",
+          "rationale": "Gold standard for ILD characterisation. Identifies pattern (UIP/NSIP/DIP/COP/HP/sarcoid), distribution, and activity. Can guide biopsy site selection. Essential for all suspected ILD.",
+          "india_context": "HRCT is mandatory for ILD workup in India. Low-dose HRCT protocol reduces dose significantly. TB must always be excluded (HRCT may show TB mimicking ILD).",
+          "special_notes": "UIP pattern (basal-predominant honeycombing, traction bronchiectasis, subpleural) = probable IPF. Ground glass predominant = NSIP, HP. Upper lobe nodules + hilar lymph nodes = sarcoidosis.",
+          "contraindicated_if": ["pregnancy (use standard dose only if essential — low-dose HRCT preferred)"]
+        },
+        {
+          "modality": "Chest CT with contrast (for sarcoidosis / lymphoma)",
+          "code": "CT-CHEST-CONTRAST",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "When lymphadenopathy is prominent (sarcoidosis, lymphoma) or vascular involvement suspected. Not routinely needed for standard ILD workup.",
+          "india_context": "Use when bilateral hilar lymphadenopathy needs characterisation (TB vs sarcoidosis vs lymphoma).",
+          "special_notes": null,
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        }
+      ]
+    }
+  ]
+}

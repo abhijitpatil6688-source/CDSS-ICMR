@@ -1,0 +1,344 @@
+{
+  "version": "1.0",
+  "body_system": "gynaecology",
+  "source": "ICMR Guidelines + ACR Appropriateness Criteria (India-adapted)",
+  "last_updated": "2024-01-01",
+  "scenarios": [
+    {
+      "id": "gynae-001",
+      "title": "Suspected Ectopic Pregnancy",
+      "clinical_conditions": ["ectopic pregnancy", "tubal ectopic", "ectopic", "heterotopic pregnancy", "tubal pregnancy"],
+      "symptoms": ["amenorrhoea", "lower abdominal pain", "pelvic pain", "vaginal bleeding", "positive pregnancy test", "shoulder tip pain", "hypotension", "syncope", "adnexal tenderness"],
+      "tags": ["gynaecology", "obstetric", "emergency", "ectopic", "pregnancy", "adnexa"],
+      "references": ["ICMR Maternal Health Guidelines", "RCOG Ectopic Pregnancy Guidelines 2023", "ACR AC Ectopic Pregnancy", "FOGSI Guidelines India"],
+      "recommendations": [
+        {
+          "modality": "Transvaginal Ultrasound (TVS)",
+          "code": "TVS-PELVIS",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line and most sensitive investigation. Identifies intrauterine pregnancy (rules out ectopic in non-heterotopic cases), free fluid, adnexal mass, and cardiac activity. TVS is superior to transabdominal for early pregnancy.",
+          "india_context": "Available at all gynaecology units. Combined with serum beta-hCG for diagnosis and monitoring. All women of reproductive age with pelvic pain must have TVS. Informed consent required in unmarried women as per local practice.",
+          "special_notes": "Intrauterine gestational sac visible on TVS when serum hCG >1500–2000 IU/L (discriminatory zone). Adnexal ring sign or ectopic heartbeat is diagnostic.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Transabdominal Ultrasound (TAS)",
+          "code": "TAS-PELVIS",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Useful initial scan when TVS not immediately available or patient declines TVS. Inferior to TVS for early intrauterine pregnancy detection.",
+          "india_context": "TAS widely available. In many Indian settings, TVS may require consent discussion. TAS can detect free fluid in haemoperitoneum and large adnexal masses.",
+          "special_notes": "Full bladder required for adequate TAS. If inconclusive, proceed to TVS.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Pelvis",
+          "code": "MRI-PELVIS",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "When TVS is inconclusive, especially for unusual locations (cornual, cervical, abdominal, scar ectopic). Avoids radiation — preferred over CT in pregnancy.",
+          "india_context": "Reserve for rare ectopic locations or when TVS is technically limited. Available at tertiary centres.",
+          "special_notes": "Avoid gadolinium in first trimester unless absolutely necessary.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen/Pelvis",
+          "code": "CT-ABDOMEN-PELVIS",
+          "rating": 3,
+          "appropriateness": "usually_not_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–10 mSv",
+          "rationale": "Generally avoided in suspected ectopic pregnancy due to radiation to early pregnancy/gonads. Only consider if ultrasound is unavailable and haemodynamic compromise requires rapid surgical planning.",
+          "india_context": "Avoid CT in reproductive-age women unless absolutely unavoidable. Ultrasound should be used in all cases.",
+          "special_notes": "If CT is unavoidable (e.g., haemoperitoneum, unstable, no US available), shield pelvic organs as much as possible.",
+          "contraindicated_if": ["known or suspected viable intrauterine pregnancy"]
+        }
+      ]
+    },
+    {
+      "id": "gynae-002",
+      "title": "Acute Pelvic Pain / Suspected Ovarian Torsion",
+      "clinical_conditions": ["ovarian torsion", "adnexal torsion", "ruptured ovarian cyst", "ovarian cyst", "torsion of ovary", "haemorrhagic cyst"],
+      "symptoms": ["sudden acute pelvic pain", "severe lower abdominal pain", "nausea", "vomiting", "adnexal tenderness", "pelvic mass", "rebound tenderness", "ovarian cyst history"],
+      "tags": ["gynaecology", "emergency", "ovary", "torsion", "cyst", "adnexa"],
+      "references": ["ACOG Practice Bulletin Adnexal Torsion", "ISUOG Guidelines", "ACR AC Acute Pelvic Pain Female", "FOGSI Guidelines India"],
+      "recommendations": [
+        {
+          "modality": "Transvaginal Ultrasound with Doppler (TVS)",
+          "code": "TVS-DOPPLER",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Essential first-line investigation. Assesses ovarian size, echogenicity, follicles, and Doppler flow. Absent or reduced blood flow is suspicious for torsion but normal flow does not exclude it.",
+          "india_context": "Available at all gynaecology units. TVS with colour Doppler is the investigation of choice. Torsion is a surgical emergency — image without delay.",
+          "special_notes": "Normal ovarian blood flow on Doppler does NOT exclude torsion (intermittent torsion, venous preservation). Clinical suspicion should guide decision to operate.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Transabdominal Ultrasound (TAS)",
+          "code": "TAS-PELVIS",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Can identify enlarged ovary, adnexal mass, or free fluid. Less sensitive than TVS for early torsion.",
+          "india_context": "First-line where TVS is not immediately available or declined.",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Pelvis",
+          "code": "MRI-PELVIS",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "High soft tissue resolution. Identifies twisted vascular pedicle (whirlpool sign), haemorrhagic infarction, and complex cysts. Use when US inconclusive and clinical suspicion persists.",
+          "india_context": "Use in pregnant patients with suspected torsion to avoid CT radiation.",
+          "special_notes": "T2-weighted sequences best for ovarian structure. Twisted pedicle seen as a hypointense band.",
+          "contraindicated_if": ["haemodynamic instability requiring immediate surgery"]
+        },
+        {
+          "modality": "CT Pelvis with contrast",
+          "code": "CT-PELVIS",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–8 mSv",
+          "rationale": "When MRI unavailable and clinical suspicion high. Can detect twisted pedicle, enlarged heterogeneous ovary, and free fluid.",
+          "india_context": "Use only when US is inconclusive and MRI not available. Avoid in pregnancy or reproductive-age women unless essential.",
+          "special_notes": null,
+          "contraindicated_if": ["pregnancy", "contrast allergy"]
+        }
+      ]
+    },
+    {
+      "id": "gynae-003",
+      "title": "Uterine Fibroids / Leiomyoma",
+      "clinical_conditions": ["uterine fibroids", "leiomyoma", "uterine myoma", "fibromyoma", "uterine leiomyomata"],
+      "symptoms": ["heavy menstrual bleeding", "menorrhagia", "pelvic pressure", "bulk symptoms", "urinary frequency", "constipation", "pelvic mass", "dysmenorrhoea", "infertility"],
+      "tags": ["gynaecology", "uterus", "fibroids", "leiomyoma", "bleeding"],
+      "references": ["ACOG Uterine Fibroids Guidelines 2021", "ISUOG Fibroid Guidelines", "ACR AC Uterine Fibroids", "FOGSI India Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Transvaginal Ultrasound (TVS)",
+          "code": "TVS-PELVIS",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line for fibroid detection, number, size, location (FIGO classification), and endometrial assessment. Identifies submucosal fibroids best on TVS.",
+          "india_context": "Fibroids are among the most common indications for hysterectomy in India. TVS is universally available and first-line. Saline infusion sonography (SIS) for submucosal fibroids.",
+          "special_notes": "FIGO classification (Types 0–8) determines treatment. Submucosal (Types 0-2) cause most menorrhagia. Document number, size, and location of each fibroid.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Pelvis",
+          "code": "MRI-PELVIS",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Gold standard for fibroid mapping before myomectomy or uterine artery embolisation (UAE). Identifies all fibroids including deep intramural, delineates relationship to endometrium and serosa.",
+          "india_context": "Mandatory before UAE or complex myomectomy. Differentiates fibroids from adenomyosis — both common in Indian women. Available at tertiary centres.",
+          "special_notes": "Distinguish leiomyoma (T2 hypointense) from adenomyosis (diffuse junctional zone thickening) — treatment differs. LGE post-UAE confirms infarction.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        },
+        {
+          "modality": "Sonohysterography (SIS – Saline Infusion Sonography)",
+          "code": "SIS-SONO",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Best for evaluation of submucosal fibroid component and endometrial cavity. Guides decision for hysteroscopic versus open myomectomy.",
+          "india_context": "Can be performed at gynaecology outpatient. Minimal equipment needed — saline, catheter, and TVS probe. Cost-effective.",
+          "special_notes": null,
+          "contraindicated_if": ["active PID", "pregnancy"]
+        },
+        {
+          "modality": "CT Pelvis",
+          "code": "CT-PELVIS",
+          "rating": 3,
+          "appropriateness": "usually_not_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–8 mSv",
+          "rationale": "Poor soft tissue contrast for uterine assessment. Not recommended for routine fibroid evaluation. Use only if malignancy is suspected and MRI is unavailable.",
+          "india_context": "Avoid CT for benign fibroid evaluation — use MRI or ultrasound.",
+          "special_notes": null,
+          "contraindicated_if": ["pregnancy", "reproductive age women for non-emergency"]
+        }
+      ]
+    },
+    {
+      "id": "gynae-004",
+      "title": "Pelvic Inflammatory Disease (PID) / Tubo-Ovarian Abscess",
+      "clinical_conditions": ["pelvic inflammatory disease", "pid", "tubo-ovarian abscess", "toa", "salpingitis", "endometritis", "oophoritis"],
+      "symptoms": ["pelvic pain", "lower abdominal pain", "vaginal discharge", "fever", "cervical motion tenderness", "bilateral adnexal tenderness", "dyspareunia", "irregular bleeding"],
+      "tags": ["gynaecology", "infection", "pid", "abscess", "salpingitis", "sti"],
+      "references": ["CDC PID Treatment Guidelines 2021", "ISUOG PID Guidelines", "ACR AC Pelvic Pain Female", "FOGSI India Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Transvaginal Ultrasound (TVS)",
+          "code": "TVS-PELVIS",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line imaging. Identifies hydro/pyosalpinx, tubo-ovarian complex, tubo-ovarian abscess, free pelvic fluid. Essential to distinguish uncomplicated PID from TOA which requires different management.",
+          "india_context": "STI-related PID common in reproductive-age Indian women. TB-related PID/salpingitis also prevalent. Consider TB aetiology in chronic cases.",
+          "special_notes": "Cogwheel sign (incomplete septa in dilated tube) and beads-on-a-string sign are characteristic of hydrosalpinx. TOA appears as a complex adnexal mass.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Abdomen/Pelvis with contrast",
+          "code": "CT-ABDOMEN-PELVIS",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "For suspected TOA with systemic sepsis, surgical planning, or to exclude other causes of acute abdomen. Identifies abscess location, extent, and complications.",
+          "india_context": "Use when clinical condition is severe or TOA does not respond to antibiotics. Required for surgical/radiological drainage planning.",
+          "special_notes": "Air within adnexal mass on CT = gas-forming abscess, surgical emergency.",
+          "contraindicated_if": ["pregnancy", "contrast allergy", "renal failure"]
+        },
+        {
+          "modality": "MRI Pelvis",
+          "code": "MRI-PELVIS",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For complex cases where TVS is inconclusive or when TB salpingitis/endometritis needs to be excluded. Excellent soft tissue detail without radiation.",
+          "india_context": "In India, TB pelvic inflammatory disease is common. MRI helps distinguish TB from bacterial PID (TB shows calcifications, dense fibrosis, discrete lymph nodes).",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "gynae-005",
+      "title": "Abnormal Uterine Bleeding / Endometrial Pathology",
+      "clinical_conditions": ["abnormal uterine bleeding", "endometrial carcinoma", "endometrial hyperplasia", "postmenopausal bleeding", "endometrial cancer", "endometrial polyp", "aub"],
+      "symptoms": ["postmenopausal bleeding", "heavy periods", "menorrhagia", "intermenstrual bleeding", "thickened endometrium", "blood-stained discharge"],
+      "tags": ["gynaecology", "uterus", "endometrium", "bleeding", "cancer", "postmenopausal"],
+      "references": ["ACOG AUB Guidelines", "ESGO Endometrial Cancer Guidelines 2021", "RCOG Postmenopausal Bleeding Guidelines", "FOGSI India", "ICMR Cancer Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Transvaginal Ultrasound (TVS)",
+          "code": "TVS-PELVIS",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line for measuring endometrial thickness. Postmenopausal endometrial thickness >4 mm requires histological sampling. Identifies polyps, submucosal fibroids, and focal lesions.",
+          "india_context": "Endometrial carcinoma is the most common gynaecological malignancy in urban India. TVS is first-line and available everywhere. Doppler can identify vascular polyps.",
+          "special_notes": "Endometrial thickness: Premenopausal varies with cycle; Postmenopausal >4 mm warrants biopsy. Power Doppler helps identify pedunculated polyps.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Pelvis (with contrast)",
+          "code": "MRI-PELVIS-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Gold standard for local staging of endometrial carcinoma (myometrial invasion depth, cervical extension). Essential for surgical planning and treatment decision.",
+          "india_context": "Stage IA vs IB (depth of myometrial invasion) determined by MRI dictates extent of lymph node dissection. Available at tertiary oncology centres.",
+          "special_notes": "FIGO staging: T2 sequences best for junctional zone integrity. DCE-MRI for myometrial invasion. Sagittal plane critical.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        },
+        {
+          "modality": "CT Abdomen/Pelvis (for staging)",
+          "code": "CT-ABDOMEN-PELVIS",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "Used for staging (lymph node assessment, distant metastasis). MRI superior for local staging but CT is standard for systemic staging.",
+          "india_context": "Combine with MRI pelvis for complete staging at oncology centres.",
+          "special_notes": "PET-CT increasingly used for nodal staging in high-grade tumours.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        },
+        {
+          "modality": "Sonohysterography (SIS)",
+          "code": "SIS-SONO",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Excellent for distinguishing endometrial polyp from focal hyperplasia. Best for pre-hysteroscopy assessment.",
+          "india_context": "Simple, cheap, and can be performed in outpatient clinic. Guides decision for hysteroscopic polypectomy.",
+          "special_notes": null,
+          "contraindicated_if": ["active PID", "known endometrial cancer (may seed)"]
+        }
+      ]
+    },
+    {
+      "id": "gynae-006",
+      "title": "Adnexal / Ovarian Mass — Suspected Malignancy",
+      "clinical_conditions": ["ovarian mass", "ovarian cancer", "adnexal mass", "suspected ovarian malignancy", "ovarian tumour", "adnexal tumour", "ca-125 elevated"],
+      "symptoms": ["abdominal distension", "pelvic mass", "weight loss", "early satiety", "bloating", "ca-125 elevated", "ascites", "pelvic discomfort"],
+      "tags": ["gynaecology", "ovary", "malignancy", "cancer", "adnexa", "ca125"],
+      "references": ["ESGO/ESMO Ovarian Cancer Guidelines 2022", "ACOG Ovarian Cyst Guidelines", "ACR AC Adnexal Mass", "ICMR Cancer Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Transvaginal Ultrasound (TVS) with Doppler",
+          "code": "TVS-DOPPLER",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line investigation. IOTA (International Ovarian Tumour Analysis) criteria classify masses as benign or malignant. Features of malignancy: thick septae, solid components, papillary projections, ascites, bilateral.",
+          "india_context": "Epithelial ovarian cancer is most common in postmenopausal Indian women. Combine with serum CA-125. Early diagnosis significantly improves outcomes.",
+          "special_notes": "IOTA Simple Rules: M-features (malignant) vs B-features (benign). ADNEX model for risk stratification. Any solid component in postmenopausal ovarian cyst requires urgent further evaluation.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Pelvis with contrast",
+          "code": "MRI-PELVIS-CONTRAST",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Best for tissue characterisation of indeterminate adnexal masses on ultrasound. Identifies fat (dermoid), T2 dark fibromas, endometrioma, and enhancement patterns suggesting malignancy.",
+          "india_context": "Reserve for IOTA-indeterminate lesions. Available at oncology centres. Endometrioma (chocolate cyst) is very common in Indian women and has characteristic MRI appearance.",
+          "special_notes": "T1 fat-sat: endometrioma (T1 bright, T1 fat-sat bright = blood). T2: fibroma (T2 dark). LGE: malignant enhancement.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "severe renal failure (gadolinium)"]
+        },
+        {
+          "modality": "CT Abdomen/Pelvis (staging)",
+          "code": "CT-ABDOMEN-PELVIS",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "Standard for ovarian cancer staging. Assesses peritoneal deposits, ascites, lymphadenopathy, liver and lung metastases. Guides surgical resectability assessment.",
+          "india_context": "Most ovarian cancers in India present at advanced stage (III/IV). CT chest/abdomen/pelvis essential for staging. PMJAY covers cancer staging investigations.",
+          "special_notes": "Omental caking, peritoneal deposits, ascites = advanced disease. Pre-op CT determines primary cytoreductive vs neoadjuvant chemotherapy.",
+          "contraindicated_if": ["contrast allergy", "renal failure (use non-contrast with limitations)"]
+        },
+        {
+          "modality": "PET-CT (FDG)",
+          "code": "PET-CT-FDG",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "For suspected recurrence, restaging after chemotherapy, and evaluation of CA-125 rise with negative conventional imaging.",
+          "india_context": "Available at AIIMS, Tata Memorial, and major oncology centres. Increasingly covered under cancer treatment packages.",
+          "special_notes": "False positives possible in peritoneal deposits <1 cm. Combine with CA-125 trend for recurrence monitoring.",
+          "contraindicated_if": ["uncontrolled diabetes (reduces sensitivity)", "recent chemotherapy <4–6 weeks (reduces FDG uptake)"]
+        }
+      ]
+    }
+  ]
+}

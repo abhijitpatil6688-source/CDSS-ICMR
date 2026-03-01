@@ -1,0 +1,298 @@
+{
+  "version": "1.0",
+  "body_system": "urinary",
+  "source": "ICMR Guidelines + ACR Appropriateness Criteria (India-adapted)",
+  "last_updated": "2024-01-01",
+  "scenarios": [
+    {
+      "id": "urin-001",
+      "title": "Renal / Ureteric Calculi (Urolithiasis)",
+      "clinical_conditions": ["kidney stones", "renal calculi", "ureteric calculi", "urolithiasis", "nephrolithiasis", "renal colic", "ureteric colic", "loin to groin pain"],
+      "symptoms": ["loin to groin pain", "colicky pain", "haematuria", "nausea", "vomiting", "urinary frequency", "costovertebral angle tenderness", "dysuria", "renal colic", "flank pain"],
+      "tags": ["urinary", "renal", "calculi", "stones", "colic", "haematuria"],
+      "references": ["ICMR Urology Guidelines", "EAU Urolithiasis Guidelines 2023", "ACR AC Acute Onset Flank Pain", "USI Guidelines India"],
+      "recommendations": [
+        {
+          "modality": "NCCT KUB (Non-Contrast CT Kidneys Ureters Bladder)",
+          "code": "NCCT-KUB",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "3–5 mSv",
+          "rationale": "Gold standard for ureteric and renal calculi. >95% sensitivity and specificity. Detects all stone types including radiolucent uric acid stones. Shows stone size, site, density (HU), and secondary signs of obstruction.",
+          "india_context": "India is in the 'stone belt' — high prevalence, especially in northern and western states. NCCT KUB is the definitive investigation. Low-dose NCCT protocol should be used to reduce radiation. PMJAY covers this investigation.",
+          "special_notes": "Low-dose NCCT (≤3 mSv) is as accurate as standard dose. Stone density (HU) guides ESWL suitability: <1000 HU = likely ESWL-responsive. Measure stone-skin distance for ESWL planning.",
+          "contraindicated_if": ["pregnancy (use ultrasound / MRI urography instead)"]
+        },
+        {
+          "modality": "Ultrasound KUB (Kidneys-Ureters-Bladder)",
+          "code": "USG-KUB",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line in pregnant patients, children, and for monitoring known calculi. Detects hydronephrosis and renal calculi but has lower sensitivity for ureteric stones (especially mid-ureter).",
+          "india_context": "Preferred first-line in pregnancy (mandatory — no radiation). Available everywhere. Point-of-care ultrasound (POCUS) being adopted in Indian emergency departments.",
+          "special_notes": "Sensitivity for ureteric calculi only 45–60% (poor for mid-ureter). Useful for hydronephrosis detection and follow-up. Ureteric jets on Doppler can confirm ureteric patency.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Urography",
+          "code": "MRI-UROGRAPHY",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Preferred alternative to NCCT KUB in pregnancy. Good for hydronephrosis but stones appear as signal voids — less sensitive for small stones.",
+          "india_context": "Use in pregnant women when ultrasound is inconclusive. Available at tertiary centres.",
+          "special_notes": "Heavily T2-weighted sequences (HASTE, FIESTA) used. Gadolinium not usually required. Not as sensitive as NCCT for stone detection.",
+          "contraindicated_if": ["first trimester (gadolinium if used — avoid)"]
+        },
+        {
+          "modality": "X-Ray KUB (Plain Radiograph)",
+          "code": "XRAY-KUB",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.5–1 mSv",
+          "rationale": "Identifies radio-opaque stones (calcium oxalate, calcium phosphate, struvite). Misses radiolucent stones (uric acid ~15%) and most ureteric stones. Useful for post-treatment follow-up.",
+          "india_context": "Available everywhere and cheap. Useful to confirm stone passage post-treatment or for serial follow-up.",
+          "special_notes": "70–80% of renal calculi are radio-opaque. Does not show uric acid or cystine stones well.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Intravenous Pyelogram (IVP / IVU)",
+          "code": "IVP",
+          "rating": 2,
+          "appropriateness": "usually_not_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "1–3 mSv",
+          "rationale": "Largely replaced by NCCT KUB and CT urography. Requires contrast, provides functional information but inferior anatomical detail for stones.",
+          "india_context": "NCCT KUB is superior in all aspects. IVP should be abandoned in favour of NCCT KUB where available.",
+          "special_notes": "Reserve only if CT is unavailable and anatomical/functional information of collecting system is specifically needed.",
+          "contraindicated_if": ["renal failure", "contrast allergy", "pregnancy"]
+        }
+      ]
+    },
+    {
+      "id": "urin-002",
+      "title": "Painless Haematuria",
+      "clinical_conditions": ["painless haematuria", "haematuria", "microscopic haematuria", "gross haematuria", "blood in urine", "frank haematuria"],
+      "symptoms": ["blood in urine", "painless haematuria", "microscopic haematuria", "frank haematuria", "clot passage", "dark coloured urine"],
+      "tags": ["urinary", "haematuria", "bladder", "kidney", "urothelial", "cancer"],
+      "references": ["ICMR Urology Guidelines", "EAU Haematuria Guidelines 2023", "AUA Haematuria Guidelines 2020", "ACR AC Haematuria"],
+      "recommendations": [
+        {
+          "modality": "CT Urography (CTU — 3-phase)",
+          "code": "CT-UROGRAPHY",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "15–20 mSv",
+          "rationale": "Gold standard for haematuria workup. Three phases (non-contrast, corticomedullary, excretory) evaluate the entire urothelium from renal parenchyma to bladder. Detects masses, calculi, and urothelial tumours.",
+          "india_context": "High prevalence of bladder cancer (second most common urological malignancy in India) and renal cell carcinoma. CTU is first-line for haematuria workup at tertiary centres.",
+          "special_notes": "Whole urinary tract evaluated in one examination. Split-bolus technique reduces radiation dose while maintaining diagnostic quality. Bladder evaluation may still need cystoscopy for small mucosal lesions.",
+          "contraindicated_if": ["severe renal failure (eGFR <30)", "contrast allergy", "pregnancy"]
+        },
+        {
+          "modality": "Ultrasound KUB",
+          "code": "USG-KUB",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line at primary/secondary level. Identifies renal masses, calculi, and bladder masses. Limited sensitivity for small urothelial tumours and upper tract lesions.",
+          "india_context": "Available everywhere and no radiation. Use as initial investigation. If US inconclusive or high-risk features, proceed to CTU.",
+          "special_notes": "Full bladder required for adequate bladder assessment. Add colour Doppler for vascularity of renal masses.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Urography",
+          "code": "MRI-UROGRAPHY",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Alternative to CTU when radiation must be minimised (young women, recurrent imaging, renal insufficiency with gadolinium limitations). Good soft tissue detail.",
+          "india_context": "Use in patients with renal insufficiency or contrast allergy where non-contrast CTU is insufficient. Available at tertiary centres.",
+          "special_notes": "Gadolinium may be withheld if eGFR <30 (risk of NSF). Non-contrast MRI still useful for collecting system.",
+          "contraindicated_if": ["severe renal failure (gadolinium)", "pacemaker"]
+        }
+      ]
+    },
+    {
+      "id": "urin-003",
+      "title": "Renal Mass / Suspected Renal Cell Carcinoma (RCC)",
+      "clinical_conditions": ["renal mass", "renal cell carcinoma", "rcc", "renal tumour", "incidental renal mass", "kidney mass", "hypernephroma"],
+      "symptoms": ["haematuria", "flank pain", "flank mass", "weight loss", "incidental finding on imaging", "hypertension", "polycythaemia", "hypercalcaemia"],
+      "tags": ["urinary", "kidney", "rcc", "mass", "tumour", "cancer"],
+      "references": ["EAU Renal Cell Carcinoma Guidelines 2023", "ICMR Cancer Guidelines", "ACR AC Renal Mass", "USI India Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Abdomen Multiphase (4-phase renal protocol)",
+          "code": "CT-RENAL-MULTIPHASIC",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "15–25 mSv",
+          "rationale": "Gold standard for characterisation and staging of renal masses. Four phases (non-contrast, corticomedullary, nephrographic, excretory) assess enhancement pattern, vascularity, collecting system involvement, and staging.",
+          "india_context": "Incidental renal masses increasingly detected on ultrasound. CT characterises malignant potential and guides nephron-sparing surgery decisions.",
+          "special_notes": "Enhancement >15–20 HU between non-contrast and post-contrast = enhancing mass (malignant until proven otherwise). Bosniak classification for cystic renal masses (I–IV).",
+          "contraindicated_if": ["severe renal failure (contrast — consider non-contrast + MRI)", "contrast allergy"]
+        },
+        {
+          "modality": "MRI Abdomen (renal protocol)",
+          "code": "MRI-RENAL",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Superior to CT for indeterminate lesions (Bosniak IIF, III cysts), fat-poor angiomyolipoma, and assessment in renal insufficiency. DWI and chemical shift imaging help characterise subtypes.",
+          "india_context": "Use when CT is inconclusive or renal function is impaired. Available at tertiary centres. Also preferred for young patients to avoid radiation.",
+          "special_notes": "Chemical shift (in-phase vs out-of-phase) detects microscopic fat — clear cell vs other subtypes. DWI: restricted diffusion suggests malignancy.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "severe renal failure (gadolinium — use non-contrast MRI)"]
+        },
+        {
+          "modality": "Ultrasound Abdomen",
+          "code": "USG-ABDOMEN",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Incidental detection of renal masses. Characterises simple cysts (no further imaging needed) but limited for solid mass characterisation — must proceed to CT or MRI.",
+          "india_context": "Most renal masses in India are incidentally detected on ultrasound. Any solid or complex cystic renal mass on US needs CT/MRI.",
+          "special_notes": "Simple cysts (Bosniak I) on US: anechoic, posterior acoustic enhancement, no septa = no further imaging. Any deviation requires CT.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Chest / Bone Scan (staging)",
+          "code": "CT-CHEST-BONE-SCAN",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–10 mSv",
+          "rationale": "Lung is the most common site of RCC metastasis. CT chest for pulmonary staging; Tc-99m bone scan if bone pain or ALP elevated.",
+          "india_context": "Stage at diagnosis guides surgical decision. Advanced disease: systemic therapy (TKIs).",
+          "special_notes": "PET-CT not routinely recommended for RCC staging as FDG uptake is variable.",
+          "contraindicated_if": ["contrast allergy (bone scan is non-contrast)"]
+        }
+      ]
+    },
+    {
+      "id": "urin-004",
+      "title": "Recurrent UTI / Suspected Urinary Tract Anomaly",
+      "clinical_conditions": ["recurrent uti", "recurrent urinary tract infection", "urinary tract anomaly", "vesicoureteral reflux", "vur", "duplex collecting system", "pelviureteric junction obstruction", "puj obstruction"],
+      "symptoms": ["recurrent urinary tract infections", "haematuria", "urinary frequency", "dysuria", "flank pain", "bedwetting", "urinary incontinence", "poor urine stream", "recurrent fever in children"],
+      "tags": ["urinary", "uti", "anomaly", "reflux", "vur", "paediatric", "puj"],
+      "references": ["ICMR Paediatric Urology Guidelines", "EAU Paediatric Urology Guidelines 2023", "ACR AC Recurrent UTI", "IAP Guidelines India"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound KUB",
+          "code": "USG-KUB",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line for all children and adults with recurrent UTI. Identifies hydronephrosis, duplex systems, bladder wall thickening, post-void residual, and structural anomalies.",
+          "india_context": "Recurrent UTI in children mandates imaging in India. Antenatal hydronephrosis is common — postnatal follow-up with ultrasound mandatory. Available at all district hospitals.",
+          "special_notes": "Always include post-void residual bladder scan. Check for renal scarring (cortical thinning). Measure both kidneys and ureters.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MCUG (Micturating Cystourethrogram)",
+          "code": "MCUG",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "0.5–2 mSv",
+          "rationale": "Gold standard for vesicoureteral reflux (VUR) grading and urethral anatomy (posterior urethral valves in boys). Essential in children with confirmed UTI and abnormal upper tract imaging.",
+          "india_context": "Recommended in Indian paediatric urology guidelines for children with febrile UTI and hydronephrosis. Posterior urethral valves are a common cause of recurrent UTI in boys.",
+          "special_notes": "Perform when UTI has settled. Grade VUR I–V on MCUG. Grades IV–V require surgery; I–III managed medically with prophylactic antibiotics.",
+          "contraindicated_if": ["active UTI (wait until treated)", "contrast allergy"]
+        },
+        {
+          "modality": "DMSA Renal Scintigraphy",
+          "code": "DMSA-SCAN",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.5–1 mSv",
+          "rationale": "Gold standard for detecting renal cortical scarring from pyelonephritis/reflux nephropathy. Assesses differential renal function. Essential for long-term management decisions in recurrent UTI with VUR.",
+          "india_context": "Available at nuclear medicine departments in major cities. Used for scarring assessment and differential function before surgical intervention.",
+          "special_notes": "Perform ≥6 months after acute pyelonephritis to distinguish scars from acute lesions. DTPA/MAG-3 for drainage assessment (obstruction).",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MR Urography",
+          "code": "MRI-UROGRAPHY",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Comprehensive evaluation of urinary tract anatomy and function without radiation. Ideal for children when multiple investigations needed or complex anomalies (duplex systems, ectopic ureters).",
+          "india_context": "Increasingly used in paediatric centres as it avoids radiation and provides comprehensive anatomical assessment.",
+          "special_notes": "Combined anatomical and functional information. Requires sedation in young children.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "young children (may need sedation)"]
+        }
+      ]
+    },
+    {
+      "id": "urin-005",
+      "title": "Bladder Mass / Suspected Urothelial Carcinoma",
+      "clinical_conditions": ["bladder mass", "transitional cell carcinoma", "urothelial carcinoma", "bladder cancer", "tcc", "bladder tumour", "squamous cell carcinoma bladder"],
+      "symptoms": ["painless haematuria", "urinary frequency", "dysuria", "pelvic mass", "weight loss", "lower urinary tract symptoms", "clot passage", "obstructive symptoms"],
+      "tags": ["urinary", "bladder", "cancer", "urothelial", "tcc", "haematuria", "malignancy"],
+      "references": ["EAU Bladder Cancer Guidelines 2023", "ICMR Cancer Guidelines", "ACR AC Bladder Tumour", "USI India Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Urography (CTU)",
+          "code": "CT-UROGRAPHY",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "15–20 mSv",
+          "rationale": "First-line cross-sectional imaging. Evaluates entire urothelium, detects bladder mass, local invasion, lymph nodes, and upper tract involvement. Essential for staging.",
+          "india_context": "Bladder cancer is the second most common urological malignancy in India. Squamous cell carcinoma of bladder associated with Schistosomiasis and chronic catheterisation more common in India than the West.",
+          "special_notes": "Muscle invasion (T2+) seen as loss of fat plane with bladder wall. Lymph node assessment critical. Combined with cystoscopy for complete evaluation.",
+          "contraindicated_if": ["severe renal failure", "contrast allergy"]
+        },
+        {
+          "modality": "Ultrasound Bladder (full bladder)",
+          "code": "USG-BLADDER",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line for haematuria at primary level. Can detect bladder masses >5 mm. Assess wall thickness and vascularity with Doppler. Does not stage or detect upper tract lesions.",
+          "india_context": "Widely available. Useful initial investigation before proceeding to CTU.",
+          "special_notes": "Must be performed with full bladder. Intraluminal masses with vascularity on Doppler are suspicious. Small flat tumours (CIS) may be missed.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Pelvis (multiparametric mpMRI)",
+          "code": "MRI-PELVIS-BLADDER",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Superior for local T-staging of bladder cancer (VI-RADS classification). Distinguishes non-muscle invasive (T1) from muscle-invasive (T2+) bladder cancer — critical for treatment decision.",
+          "india_context": "VI-RADS MRI is now standard for muscle-invasive assessment before radical cystectomy at oncology centres. Available at major hospitals.",
+          "special_notes": "VI-RADS 1-2 = low probability of muscle invasion; 3 = equivocal; 4-5 = high probability. DWI critical for VI-RADS.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        },
+        {
+          "modality": "PET-CT (FDG)",
+          "code": "PET-CT-FDG",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "For nodal and distant staging in muscle-invasive bladder cancer (MIBC). Urinary FDG excretion limits bladder assessment but useful for metastatic disease evaluation.",
+          "india_context": "Used for MIBC staging before neoadjuvant chemotherapy decisions. Available at major oncology centres.",
+          "special_notes": "FDG PET limited for primary bladder lesion (urinary excretion). Most useful for lymph node and distant metastases.",
+          "contraindicated_if": ["uncontrolled diabetes", "recent chemotherapy <4 weeks"]
+        }
+      ]
+    }
+  ]
+}

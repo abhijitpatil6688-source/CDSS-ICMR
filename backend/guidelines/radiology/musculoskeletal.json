@@ -1,0 +1,424 @@
+{
+  "version": "1.0",
+  "body_system": "musculoskeletal",
+  "source": "ICMR Guidelines + ACR Appropriateness Criteria (India-adapted)",
+  "last_updated": "2024-01-01",
+  "scenarios": [
+    {
+      "id": "msk-001",
+      "title": "Acute Low Back Pain (Non-specific, <6 weeks)",
+      "clinical_conditions": ["low back pain", "lbp", "acute back pain", "lumbar pain", "lumbago"],
+      "symptoms": ["low back pain", "back pain", "lumbar pain", "muscle spasm", "pain radiating to buttock"],
+      "tags": ["spine", "back", "musculoskeletal", "lumbar"],
+      "references": ["ICMR Low Back Pain Guidelines", "ACR AC Low Back Pain 2022", "ESR Spine Guidelines", "NICE Back Pain Guidelines 2016"],
+      "recommendations": [
+        {
+          "modality": "No Imaging (Clinical Management)",
+          "code": "NO-IMAGING",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For uncomplicated acute LBP (<6 weeks) without red flags, imaging does not change management and may lead to overtreatment. Conservative management is first-line.",
+          "india_context": "Imaging in non-specific LBP shows findings in >80% of asymptomatic adults — disc bulge, facet arthropathy. These are age-related, not necessarily the cause of pain.",
+          "special_notes": "Red flags requiring urgent imaging: age >50, fever, weight loss, history of malignancy, IV drug use, trauma, neurological deficit, sphincter dysfunction, steroid use.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "X-Ray Lumbar Spine",
+          "code": "XR-LUMBAR-SPINE",
+          "rating": 4,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "1.5 mSv",
+          "rationale": "Limited value in non-specific LBP. May detect spondylolisthesis, fracture, or spondylitis if clinically suspected.",
+          "india_context": "Not recommended for routine acute LBP. Order only if red flags present (fracture, spondyloarthropathy suspicion).",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Lumbar Spine",
+          "code": "MRI-LUMBAR",
+          "rating": 4,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Not indicated in acute non-specific LBP. Reserve for red flags or when radiculopathy requires surgical evaluation.",
+          "india_context": "High rate of incidental findings leading to unnecessary procedures. Do not order routinely.",
+          "special_notes": "Indicated for: suspected cauda equina syndrome (EMERGENCY), neurological deficits, cancer workup, infection, >6 weeks with failed conservative treatment.",
+          "contraindicated_if": ["pacemaker"]
+        },
+        {
+          "modality": "CT Lumbar Spine",
+          "code": "CT-LUMBAR",
+          "rating": 3,
+          "appropriateness": "usually_not_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "6 mSv",
+          "rationale": "Not recommended for non-specific LBP. High radiation dose. MRI preferred when imaging needed.",
+          "india_context": "Avoid routine CT for LBP. Use only for bony pathology (fracture, bony metastasis) or when MRI contraindicated.",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "msk-002",
+      "title": "Suspected Fracture — Appendicular Skeleton",
+      "clinical_conditions": ["fracture", "suspected fracture", "bone fracture", "trauma", "wrist fracture", "ankle fracture", "limb fracture"],
+      "symptoms": ["pain after trauma", "swelling", "bruising", "deformity", "inability to weight bear", "point tenderness", "crepitus"],
+      "tags": ["trauma", "fracture", "musculoskeletal", "bone"],
+      "references": ["ACR AC Acute Trauma 2022", "Ottawa Rules", "ICMR Trauma Guidelines"],
+      "recommendations": [
+        {
+          "modality": "X-Ray (minimum 2 views — AP + Lateral)",
+          "code": "XR-LIMB-2-VIEW",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.001–0.01 mSv",
+          "rationale": "First-line investigation. Identifies most fractures, dislocations, and soft tissue calcification. Minimum two perpendicular views essential.",
+          "india_context": "Always request specific anatomical views — wrist (PA + lateral), ankle (AP + lateral + mortise), etc. Ottawa rules guide clinical use.",
+          "special_notes": "Ottawa Ankle Rules and Ottawa Knee Rules help decide if X-ray is needed — reduces unnecessary imaging.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT (affected region)",
+          "code": "CT-FRACTURE",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "Variable 1–10 mSv",
+          "rationale": "For complex fractures — intra-articular (calcaneum, tibial plateau, acetabulum), occult fractures not seen on X-ray, pre-operative planning.",
+          "india_context": "Essential for surgical planning in complex joint fractures. CT with 3D reconstruction for acetabular and calcaneal fractures.",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI (affected region)",
+          "code": "MRI-FRACTURE",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For occult fractures (hip stress fracture, scaphoid, undisplaced tibial plateau) not visible on X-ray.",
+          "india_context": "Order when X-ray normal but clinical suspicion high — especially hip fractures in elderly (high morbidity if missed).",
+          "special_notes": "MRI detects bone marrow oedema — most sensitive for occult fracture.",
+          "contraindicated_if": ["pacemaker"]
+        },
+        {
+          "modality": "Bone Scan (Scintigraphy)",
+          "code": "BONE-SCAN",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2–4 mSv",
+          "rationale": "Alternative when MRI unavailable for occult fracture detection. Whole body — useful for multifocal injury or metastasis.",
+          "india_context": "Use when MRI unavailable. Positive within 24–72 hours of fracture.",
+          "special_notes": "Less specific than MRI. False positives in infection, arthritis, tumour.",
+          "contraindicated_if": ["pregnancy"]
+        }
+      ]
+    },
+    {
+      "id": "msk-003",
+      "title": "Knee Pain — Acute (Suspected Ligament / Meniscal Injury)",
+      "clinical_conditions": ["knee injury", "acl tear", "mcl tear", "meniscal tear", "knee ligament injury", "sports knee injury", "knee swelling"],
+      "symptoms": ["knee pain after injury", "knee swelling", "locking", "giving way", "positive anterior drawer", "mcmurray positive", "haemarthrosis", "inability to weight bear"],
+      "tags": ["musculoskeletal", "knee", "sports", "ligament", "meniscus"],
+      "references": ["ACR AC Knee Pain 2022", "NICE MSK Guidelines", "ICMR Orthopaedic Guidelines"],
+      "recommendations": [
+        {
+          "modality": "X-Ray Knee (AP + Lateral + Skyline)",
+          "code": "XR-KNEE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.005 mSv",
+          "rationale": "First-line to exclude fracture (Ottawa Knee Rules), dislocation, loose bodies, and to assess joint space.",
+          "india_context": "Apply Ottawa Knee Rules. X-ray if: age >55, isolated patella tenderness, head of fibula tenderness, cannot flex knee 90°, cannot weight bear.",
+          "special_notes": "Cannot visualise soft tissue (ligaments, meniscus). MRI required for soft tissue.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Knee",
+          "code": "MRI-KNEE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Gold standard for soft tissue assessment — ACL, PCL, MCL, LCL, menisci, articular cartilage, and bone marrow oedema.",
+          "india_context": "Indicated when soft tissue injury suspected and X-ray normal, or before arthroscopy. 3T preferred but 1.5T acceptable.",
+          "special_notes": "High sensitivity and specificity for ACL tears (>90%). Guides surgical decision-making.",
+          "contraindicated_if": ["pacemaker", "metallic implants"]
+        },
+        {
+          "modality": "Ultrasound Knee",
+          "code": "USG-KNEE",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "For superficial structures — Baker's cyst, quadriceps/patellar tendon tears, collateral ligaments. Cannot assess cruciate ligaments or menisci reliably.",
+          "india_context": "Useful for tendon assessment and guided aspiration of joint effusion. Operator dependent.",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "msk-004",
+      "title": "Suspected Osteomyelitis",
+      "clinical_conditions": ["osteomyelitis", "bone infection", "diabetic foot osteomyelitis", "haematogenous osteomyelitis", "chronic osteomyelitis"],
+      "symptoms": ["bone pain", "fever", "local swelling", "redness", "diabetic foot wound", "sinus tract", "elevated crp", "elevated wbc"],
+      "tags": ["infection", "bone", "musculoskeletal", "orthopaedic"],
+      "references": ["ACR AC Suspected Osteomyelitis 2022", "IDSA Osteomyelitis Guidelines 2012", "ICMR Orthopaedic Guidelines"],
+      "recommendations": [
+        {
+          "modality": "MRI (affected region) with contrast",
+          "code": "MRI-BONE-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Investigation of choice. Most sensitive and specific for osteomyelitis. Detects bone marrow involvement, soft tissue extension, and abscess.",
+          "india_context": "Particularly valuable for spinal and diabetic foot osteomyelitis. Gadolinium contrast enhances accuracy.",
+          "special_notes": "High sensitivity (>90%) and specificity (>85%). Can differentiate Charcot foot from osteomyelitis.",
+          "contraindicated_if": ["pacemaker", "severe renal failure (gadolinium contraindicated)"]
+        },
+        {
+          "modality": "X-Ray (affected bone)",
+          "code": "XR-BONE",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.001–0.01 mSv",
+          "rationale": "First-line. Changes appear 10–21 days after onset — periosteal reaction, lytic areas, sclerosis. Early osteomyelitis may be normal.",
+          "india_context": "Always start with plain X-ray. Normal X-ray in acute setting requires further imaging.",
+          "special_notes": "Bony destruction visible only after 30–50% mineral loss. X-ray normal in early stages.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Bone Scan (Tc-99m MDP)",
+          "code": "BONE-SCAN-3-PHASE",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "3–5 mSv",
+          "rationale": "Positive within 24–48 hours of onset. Three-phase bone scan increases specificity. Useful when MRI contraindicated.",
+          "india_context": "Alternative when MRI not available. Whole body scan for multifocal disease.",
+          "special_notes": "WBC scan (labelled leucocytes) more specific for osteomyelitis than bone scan alone.",
+          "contraindicated_if": ["pregnancy"]
+        },
+        {
+          "modality": "CT (affected region)",
+          "code": "CT-BONE",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "3–6 mSv",
+          "rationale": "For cortical destruction, sequestrum, involucrum in chronic osteomyelitis. Guides surgical drainage.",
+          "india_context": "Use for detailed bony architecture in chronic disease or pre-surgical planning.",
+          "special_notes": null,
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "msk-005",
+      "title": "Shoulder Pain / Rotator Cuff Pathology",
+      "clinical_conditions": ["rotator cuff tear", "shoulder pain", "rotator cuff injury", "impingement syndrome", "supraspinatus tear", "adhesive capsulitis", "frozen shoulder", "shoulder instability"],
+      "symptoms": ["shoulder pain", "painful arc", "weakness on abduction", "night pain", "inability to raise arm", "shoulder stiffness", "reduced range of motion", "trauma to shoulder"],
+      "tags": ["shoulder", "rotator cuff", "musculoskeletal", "impingement", "tear"],
+      "references": ["ACR AC Shoulder Pain", "BESS/BOA Shoulder Guidelines", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Ultrasound Shoulder (dynamic)",
+          "code": "USG-SHOULDER",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line for rotator cuff evaluation. Dynamic assessment of supraspinatus, infraspinatus, subscapularis, biceps tendon. High sensitivity and specificity for full-thickness tears (>92%). Cost-effective and widely available.",
+          "india_context": "Most cost-effective option in India for rotator cuff tears. Dynamic US is superior to static MRI for impingement assessment. Available at most physiotherapy and orthopaedic units.",
+          "special_notes": "Full-thickness tear: non-visualisation of tendon. Partial tear: focal hypoechoic defect. Calcific tendinitis: hyperechoic foci with shadowing. Dynamic impingement best assessed with US.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Shoulder (with or without arthrogram)",
+          "code": "MRI-SHOULDER",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Superior to US for partial-thickness tears, labral pathology, SLAP lesions, Hill-Sachs/Bankart lesions (instability). MRI arthrogram (MRA) has highest sensitivity for partial tears and labral lesions.",
+          "india_context": "Use when US is inconclusive, instability workup is needed, or surgical planning is required. MRI arthrogram mandatory for labral tear assessment.",
+          "special_notes": "MRI arthrogram (direct intraarticular gadolinium): sensitivity >90% for partial articular-surface tears and labral tears. Essential for instability (Bankart, Hill-Sachs lesion).",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "recent intraarticular injection (>4 weeks delay for arthrogram)"]
+        },
+        {
+          "modality": "X-Ray Shoulder (AP + Axillary views)",
+          "code": "XRAY-SHOULDER",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.01 mSv",
+          "rationale": "First-line for acute trauma or when calcific tendinitis, acromioclavicular joint disease, glenohumeral arthritis, or dislocation is suspected. Identifies ACJ, acromion morphology, calcification.",
+          "india_context": "Cheap and widely available. Must be first investigation in trauma. Axillary view mandatory to confirm reduction post-dislocation.",
+          "special_notes": "Supraspinatus outlet view shows acromion morphology (Type I/II/III Bigliani) — predicts impingement. AP + Grashey (true AP) + Axillary = minimum 3 views.",
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "msk-006",
+      "title": "Hip Pain / Suspected Avascular Necrosis (AVN)",
+      "clinical_conditions": ["avascular necrosis", "avn", "hip pain", "osteonecrosis femoral head", "avn femur", "perthes disease", "hip osteoarthritis", "hip fracture"],
+      "symptoms": ["hip pain", "groin pain", "thigh pain", "pain on weight bearing", "reduced hip range of motion", "limp", "pain after steroids", "pain in sickle cell disease"],
+      "tags": ["hip", "AVN", "avascular necrosis", "femoral head", "musculoskeletal", "steroid"],
+      "references": ["ACR AC Hip Pain", "ARCO AVN Classification", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "X-Ray Hip (AP Pelvis + Frog-Leg Lateral)",
+          "code": "XRAY-HIP",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.3–0.7 mSv",
+          "rationale": "First-line for all hip pain. Identifies fractures, arthritis, AVN changes (crescent sign, collapse, sclerosis), bone tumours, and Perthes disease. Essential before any further imaging.",
+          "india_context": "AVN in India commonly caused by steroid use (nephrotic syndrome, rheumatic diseases), trauma, sickle cell disease, and alcohol. X-ray is first-line everywhere.",
+          "special_notes": "ARCO Stage I (X-ray normal, MRI positive) — MRI is needed. Crescent sign = subchondral fracture (ARCO Stage II/III). Collapse = Stage III/IV.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Hip (Bilateral, T1 + STIR)",
+          "code": "MRI-HIP-BILATERAL",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Most sensitive investigation for early AVN (ARCO Stage I — before X-ray changes). Identifies bone marrow oedema, double line sign (pathognomonic for AVN), and contralateral hip disease. Bilateral imaging essential as AVN is bilateral in 50–80%.",
+          "india_context": "MRI is mandatory for early diagnosis of steroid-induced AVN. Bilateral hip MRI should be performed in all cases. Early diagnosis allows core decompression before collapse.",
+          "special_notes": "Double line sign on MRI (T2 sclerotic outer line + inner hyperintense line) = pathognomonic for AVN. STIR or fat-sat T2 for marrow oedema. Always image BOTH hips.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        },
+        {
+          "modality": "Bone Scan (Tc-99m MDP)",
+          "code": "BONE-SCAN",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "3–5 mSv",
+          "rationale": "Cold spot (photopenic area) in femoral head = early AVN. Less sensitive and specific than MRI. Use when MRI unavailable.",
+          "india_context": "Available at nuclear medicine departments. Use as MRI alternative when unavailable. Can screen bilateral hips in one study.",
+          "special_notes": "Cold-on-hot pattern (photopenic centre with hyperaemic rim) = reparative phase of AVN.",
+          "contraindicated_if": ["pregnancy"]
+        }
+      ]
+    },
+    {
+      "id": "msk-007",
+      "title": "Cervical Spondylosis / Radiculopathy",
+      "clinical_conditions": ["cervical spondylosis", "cervical radiculopathy", "cervical disc prolapse", "cervical disc herniation", "neck pain radiculopathy", "cervical foraminal stenosis", "cervical myelopathy"],
+      "symptoms": ["neck pain", "arm pain", "radicular pain", "tingling fingers", "numbness in arm", "weakness in hand grip", "cervicobrachial pain", "paresthesia upper limb"],
+      "tags": ["cervical", "spine", "radiculopathy", "disc", "spondylosis", "neck"],
+      "references": ["AAN Cervical Radiculopathy Guidelines", "ACR AC Cervical Neck Pain", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "X-Ray Cervical Spine (AP, Lateral, Oblique)",
+          "code": "XRAY-CERVICAL-SPINE",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.1–0.2 mSv",
+          "rationale": "First-line for cervical spondylosis. Identifies disc space narrowing, osteophytes, foraminal narrowing (oblique views), and instability (flexion-extension views). Not for acute disc prolapse.",
+          "india_context": "Cervical spondylosis is extremely common in India. X-ray of cervical spine is first-line. Degenerative changes often seen from the 4th decade onwards.",
+          "special_notes": "Oblique views show foraminal narrowing (nerve root impingement level). Flexion-extension views for instability (atlantoaxial subluxation, rheumatoid arthritis).",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Cervical Spine",
+          "code": "MRI-CERVICAL-SPINE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Gold standard for cervical radiculopathy and myelopathy. Identifies disc prolapse, cord compression, nerve root compression, foraminal stenosis, and cord signal change (myelopathy). Essential for surgical planning.",
+          "india_context": "MRI is the definitive investigation for patients not responding to conservative treatment or with progressive neurological signs. Available at all major centres.",
+          "special_notes": "Cord signal change (T2 hyperintensity) = myelopathic change — surgical urgency. Neural foramina best seen on oblique parasagittal sequences. GRE sequences for ossified OPLL.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        },
+        {
+          "modality": "CT Cervical Spine",
+          "code": "CT-CERVICAL-SPINE",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "3–5 mSv",
+          "rationale": "Excellent for ossified pathology (OPLL, bony spurs, foraminal osteophytes) and post-surgical assessment. Complements MRI. Superior to MRI for bone detail.",
+          "india_context": "OPLL is a significant cause of cervical myelopathy in Indian patients. CT identifies extent of OPLL better than MRI.",
+          "special_notes": "CT myelogram if MRI is contraindicated. OPLL: continuous or segmental ossification along posterior vertebral bodies.",
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "msk-008",
+      "title": "Suspected Bone Tumour / Malignant Bone Lesion",
+      "clinical_conditions": ["bone tumour", "bone lesion", "osteosarcoma", "bone metastasis", "ewing sarcoma", "chondrosarcoma", "giant cell tumour", "multiple myeloma bone", "malignant bone lesion"],
+      "symptoms": ["bone pain", "swelling over bone", "pathological fracture", "night pain", "progressive bone pain", "palpable hard mass", "tenderness over bone", "elevated alkaline phosphatase"],
+      "tags": ["bone", "tumour", "malignancy", "osteosarcoma", "metastasis", "musculoskeletal"],
+      "references": ["ESMO Bone Sarcoma Guidelines 2023", "NCCB Bone Tumour Guidelines", "ACR AC Bone Tumours", "ICMR Cancer Guidelines"],
+      "recommendations": [
+        {
+          "modality": "X-Ray of affected region (2 views)",
+          "code": "XRAY-BONE-2VIEW",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.01–0.1 mSv",
+          "rationale": "Mandatory first investigation. Characterises lesion (lytic/sclerotic/mixed), zone of transition, cortical destruction, periosteal reaction (Codman triangle, sunburst, onion-skin), and pathological fracture risk.",
+          "india_context": "X-ray is the cornerstone of bone tumour diagnosis. Osteosarcoma (most common primary bone malignancy in adolescents) and Ewing sarcoma are important diagnoses. Metastases from breast, prostate, lung, thyroid, kidney are most common.",
+          "special_notes": "Aggressive features: wide zone of transition, periosteal reaction (Codman triangle, sunburst pattern), soft tissue extension. Benign features: sclerotic margin, narrow zone of transition. Never biopsy before imaging.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI of affected bone (with contrast)",
+          "code": "MRI-BONE-TUMOUR",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Gold standard for local staging, soft tissue extension, neurovascular involvement, and skip lesions. Essential before biopsy and surgical resection planning.",
+          "india_context": "MRI is mandatory for all suspected primary bone sarcomas. Identifies intraosseous extent, joint involvement, and growth plate crossing — determines surgical margins.",
+          "special_notes": "Intraosseous extent: T1 hypointense; Skip lesions: separate T1 hypointense foci in same bone. Soft tissue mass: best seen on T2 fat-sat or STIR. Always include the entire bone in the field of view.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        },
+        {
+          "modality": "CT Chest / Whole Body (for staging)",
+          "code": "CT-STAGING",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "10–15 mSv",
+          "rationale": "CT chest for pulmonary metastases (osteosarcoma, Ewing sarcoma). Whole-body CT or PET-CT for staging metastatic disease and skip lesions.",
+          "india_context": "Osteosarcoma and Ewing sarcoma stage with CT chest. Skip lesions in same bone are important — MRI of entire bone mandatory.",
+          "special_notes": "Osteosarcoma: pulmonary mets most common — CT chest is standard. Ewing: whole body PET-CT preferred.",
+          "contraindicated_if": ["contrast allergy"]
+        },
+        {
+          "modality": "Bone Scan (Tc-99m MDP)",
+          "code": "BONE-SCAN",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "3–5 mSv",
+          "rationale": "Detects skeletal metastases and polyostotic lesions. Identifies skip lesions and evaluates extent of bone involvement. Useful for metastatic workup and myeloma assessment (lytic lesions may be cold).",
+          "india_context": "Available at nuclear medicine centres. Whole-body survey for metastases from common primaries (breast, prostate, lung). For myeloma, PET-CT or whole-body MRI is superior to bone scan.",
+          "special_notes": "Hot spots = increased osteoblastic activity (most metastases, osteosarcoma). Cold spots = purely lytic disease (myeloma, certain RCC mets).",
+          "contraindicated_if": ["pregnancy"]
+        }
+      ]
+    }
+  ]
+}

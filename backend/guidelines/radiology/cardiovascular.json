@@ -1,0 +1,368 @@
+{
+  "version": "1.0",
+  "body_system": "cardiovascular",
+  "source": "ICMR Guidelines + ACR Appropriateness Criteria (India-adapted)",
+  "last_updated": "2024-01-01",
+  "scenarios": [
+    {
+      "id": "cardio-001",
+      "title": "Suspected Acute Coronary Syndrome (ACS / Chest Pain Cardiac)",
+      "clinical_conditions": ["acute coronary syndrome", "acs", "myocardial infarction", "mi", "stemi", "nstemi", "unstable angina", "chest pain cardiac", "coronary artery disease"],
+      "symptoms": ["chest pain", "chest tightness", "chest pressure", "radiation to arm", "jaw pain", "diaphoresis", "sweating", "nausea", "dyspnoea", "exertional chest pain", "palpitations"],
+      "tags": ["cardiac", "acs", "chest pain", "coronary", "emergency", "ischaemia"],
+      "references": ["ICMR Cardiovascular Guidelines", "ACC/AHA ACS Guidelines 2022", "ACR AC Chest Pain Coronary Artery Disease", "CSI Guidelines India"],
+      "recommendations": [
+        {
+          "modality": "Echocardiography (Transthoracic – TTE)",
+          "code": "ECHO-TTE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Essential for assessing regional wall motion abnormalities, LV function, and complications (mitral regurgitation, VSD, pericardial effusion). Should be performed within 24 hours in all ACS.",
+          "india_context": "Widely available in Indian district hospitals and above. Portable echo useful in ICU/emergency settings. First-line cardiac imaging in all Indian tertiary centres.",
+          "special_notes": "Can identify wall motion abnormality even when ECG and biomarkers are equivocal. Critical for risk stratification.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Coronary Angiography (CCTA)",
+          "code": "CCTA",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "3–10 mSv",
+          "rationale": "High negative predictive value (>99%) for significant CAD. Ideal for intermediate pre-test probability patients presenting to emergency with acute chest pain. Rapid rule-out strategy.",
+          "india_context": "Increasingly available in Indian metro and tier-2 cities. Cost-effective triage tool for emergency chest pain evaluation. Less invasive than conventional angiography.",
+          "special_notes": "Requires regular heart rate (ideally <65 bpm). Not suitable for AF or very high calcium scores. Use prospective gating to reduce dose.",
+          "contraindicated_if": ["contrast allergy", "severe renal failure (eGFR <30)", "pregnancy"]
+        },
+        {
+          "modality": "Chest X-Ray (PA/AP)",
+          "code": "CXR-PA",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "First-line for cardiomegaly, pulmonary oedema, mediastinal widening. Does not diagnose ACS but rules out other causes of chest pain and detects complications.",
+          "india_context": "Available at all levels of care. Quick, cheap, and essential in all emergency chest pain presentations.",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Conventional Coronary Angiography (DSA)",
+          "code": "CORONARY-ANGIO",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–15 mSv",
+          "rationale": "Gold standard for diagnosis and allows immediate PCI (percutaneous coronary intervention). Indicated in STEMI, high-risk NSTEMI, or when non-invasive tests are positive.",
+          "india_context": "Available at all cardiac catheterisation labs in India. PMJAY and state schemes cover PTCA/stenting. Primary PCI is standard of care for STEMI in capable centres.",
+          "special_notes": "Perform within 90 minutes for STEMI (door-to-balloon). Within 24–72 hours for high-risk NSTEMI.",
+          "contraindicated_if": ["contrast allergy (premedicate)", "active bleeding coagulopathy"]
+        },
+        {
+          "modality": "Cardiac MRI",
+          "code": "MRI-CARDIAC",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Excellent for myocardial viability, scar assessment (LGE), and differentiating MI from myocarditis. Use when echo is suboptimal or diagnosis remains uncertain.",
+          "india_context": "Limited to tertiary centres. Consider when CCTA or echo is inconclusive. Not for emergency ACS evaluation.",
+          "special_notes": "LGE (late gadolinium enhancement) distinguishes ischaemic from non-ischaemic cardiomyopathy.",
+          "contraindicated_if": ["pacemaker (older models)", "severe claustrophobia", "severe renal failure (gadolinium risk)"]
+        },
+        {
+          "modality": "Nuclear Stress Test (MPI – Myocardial Perfusion Imaging)",
+          "code": "NUCLEAR-MPI",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "For functional assessment of myocardial ischaemia. Useful in stable angina or intermediate-risk patients when CCTA is inconclusive or not feasible.",
+          "india_context": "Available at nuclear medicine centres in AIIMS, PGIMER, large private hospitals. Tc-99m MIBI or Tetrofosmin used in India.",
+          "special_notes": "Adenosine or dobutamine stress if patient cannot exercise. Assess for reversible perfusion defects.",
+          "contraindicated_if": ["severe asthma (adenosine stress)", "2nd/3rd degree AV block"]
+        }
+      ]
+    },
+    {
+      "id": "cardio-002",
+      "title": "Suspected Heart Failure / Cardiomyopathy",
+      "clinical_conditions": ["heart failure", "congestive cardiac failure", "ccf", "cardiomyopathy", "dilated cardiomyopathy", "lv dysfunction", "left ventricular failure", "cardiac failure"],
+      "symptoms": ["dyspnoea", "breathlessness", "orthopnoea", "paroxysmal nocturnal dyspnoea", "pnd", "ankle oedema", "bilateral leg swelling", "fatigue", "reduced exercise tolerance", "elevated jvp"],
+      "tags": ["cardiac", "heart failure", "ccf", "cardiomyopathy", "LVF"],
+      "references": ["ICMR Cardiovascular Guidelines", "ACC/AHA Heart Failure Guidelines 2022", "ESC Heart Failure Guidelines 2021", "ACR AC Heart Failure"],
+      "recommendations": [
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "Quick assessment for cardiomegaly, pulmonary vascular congestion, Kerley B lines, pleural effusions, and pulmonary oedema. Essential first investigation.",
+          "india_context": "Available everywhere. Cardiomegaly (CTR >0.5) is a key diagnostic finding.",
+          "special_notes": "CTR (cardiothoracic ratio) >0.5 on PA view suggests cardiomegaly. AP view overestimates cardiac size.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Echocardiography (TTE)",
+          "code": "ECHO-TTE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Cornerstone investigation for heart failure. Measures LVEF, identifies regional wall motion abnormalities, diastolic dysfunction, valvular disease, and pericardial effusion.",
+          "india_context": "Mandatory for all suspected heart failure. Widely available and first-line cardiac imaging at district hospital level and above.",
+          "special_notes": "Classify as HFrEF (<40%), HFmrEF (40–49%), or HFpEF (≥50%) based on LVEF. Guide treatment strategy.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Cardiac MRI",
+          "code": "MRI-CARDIAC",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Gold standard for myocardial tissue characterisation — differentiates dilated, hypertrophic, infiltrative (amyloid, sarcoid) and ischaemic cardiomyopathy. LGE identifies fibrosis/scar.",
+          "india_context": "Available at AIIMS and large private cardiac centres. Reserve for cases where echo is insufficient or cardiomyopathy type is unclear.",
+          "special_notes": "T1/T2 mapping for diffuse fibrosis. LGE subendocardial = ischaemic; mid-wall/epicardial = non-ischaemic.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "severe renal failure (gadolinium risk)"]
+        },
+        {
+          "modality": "Radionuclide Ventriculography (MUGA)",
+          "code": "MUGA-SCAN",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "6–8 mSv",
+          "rationale": "Accurate and reproducible LVEF measurement when echocardiography is technically limited. Useful for serial LVEF monitoring in cardiotoxic chemotherapy.",
+          "india_context": "Available at nuclear medicine departments. Consider when echo window is poor (COPD, obesity).",
+          "special_notes": "Highly reproducible. Preferred for serial monitoring during cardiotoxic chemotherapy (anthracyclines).",
+          "contraindicated_if": []
+        }
+      ]
+    },
+    {
+      "id": "cardio-003",
+      "title": "Pericardial Effusion / Cardiac Tamponade",
+      "clinical_conditions": ["pericardial effusion", "cardiac tamponade", "pericarditis", "haemopericardium", "constrictive pericarditis"],
+      "symptoms": ["chest pain", "dyspnoea", "muffled heart sounds", "raised jvp", "pulsus paradoxus", "hypotension", "tachycardia", "beckstrial", "pleuritic chest pain"],
+      "tags": ["cardiac", "pericardium", "effusion", "tamponade", "emergency"],
+      "references": ["ESC Pericardial Diseases Guidelines 2015", "ACR AC Pericardial Conditions", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Echocardiography (TTE) — URGENT",
+          "code": "ECHO-TTE-URGENT",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Mandatory and urgent for suspected tamponade. Identifies effusion size, RV collapse, IVC plethora, and guides pericardiocentesis. Bedside echo should be performed immediately in haemodynamic compromise.",
+          "india_context": "Portable echo units available in most ICUs. Vital for emergency management. TB is a very common cause of pericardial effusion in India.",
+          "special_notes": "In India, TB, malignancy, and post-cardiac surgery are most common causes. Always send fluid for AFB, cytology, protein, glucose, LDH.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Chest X-Ray (PA view)",
+          "code": "CXR-PA",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "Flask-shaped or globular cardiac silhouette suggests moderate-to-large effusion. Pulmonary fields often clear (no pulmonary oedema in pure tamponade).",
+          "india_context": "First available investigation. A globular heart on CXR in a febrile patient should raise suspicion for TB pericarditis.",
+          "special_notes": null,
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Chest / Cardiac",
+          "code": "CT-CHEST-CARDIAC",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–8 mSv",
+          "rationale": "Superior for characterising pericardial thickness (calcification in constrictive pericarditis), detecting loculated effusions, and identifying cause (malignancy, aortic dissection).",
+          "india_context": "Useful for evaluating constrictive pericarditis and TB pericarditis complications. Pericardial calcification suggests chronic TB pericarditis.",
+          "special_notes": "Pericardial thickness >4 mm suggests constrictive pericarditis. Calcification on CT is diagnostic.",
+          "contraindicated_if": ["contrast allergy", "renal failure (non-contrast CT still useful)"]
+        },
+        {
+          "modality": "Cardiac MRI",
+          "code": "MRI-CARDIAC",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Best for differentiating constrictive pericarditis from restrictive cardiomyopathy and for pericardial inflammation (late gadolinium enhancement of pericardium).",
+          "india_context": "Available at AIIMS and large cardiac centres. Use when CT and echo are inconclusive for constriction.",
+          "special_notes": "Real-time cine MRI shows ventricular interdependence and septal bounce in constrictive pericarditis.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "haemodynamic instability"]
+        }
+      ]
+    },
+    {
+      "id": "cardio-004",
+      "title": "Suspected Infective Endocarditis",
+      "clinical_conditions": ["infective endocarditis", "endocarditis", "ie", "valve vegetation", "bacteraemia cardiac", "prosthetic valve infection"],
+      "symptoms": ["fever", "new murmur", "changing murmur", "embolic phenomena", "splinter haemorrhages", "osler nodes", "janeway lesions", "splenomegaly", "haematuria", "stroke"],
+      "tags": ["cardiac", "infection", "endocarditis", "valves", "emboli"],
+      "references": ["ESC Endocarditis Guidelines 2023", "ACC/AHA Valvular Guidelines", "ACR AC Infective Endocarditis", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Echocardiography (TTE)",
+          "code": "ECHO-TTE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line. Identifies vegetations, valvular damage, abscess, and haemodynamic impact. Sensitivity ~70% for vegetations. All suspected IE must have echo.",
+          "india_context": "Rheumatic heart disease is a major risk factor for IE in India. Mitral valve most commonly affected. Oral streptococci and Staphylococcus aureus most common organisms.",
+          "special_notes": "If TTE negative but clinical suspicion high, proceed to TOE. Apply modified Duke Criteria for diagnosis.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Echocardiography (TOE – Transoesophageal)",
+          "code": "ECHO-TOE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Superior sensitivity (>90%) for vegetations, perivalvular abscess, and prosthetic valve IE. Mandatory when TTE is negative but suspicion remains, or for prosthetic valve IE.",
+          "india_context": "Available at tertiary cardiac centres. Essential for prosthetic valve infection and perivalvular complications.",
+          "special_notes": "TOE is superior for posterior structures (mitral valve, aortic root abscess). Requires sedation.",
+          "contraindicated_if": ["oesophageal stricture", "recent oesophageal surgery"]
+        },
+        {
+          "modality": "CT Abdomen/Chest/Brain (for embolic complications)",
+          "code": "CT-WHOLE-BODY-EMBOLI",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "high",
+          "radiation_msv_range": "10–15 mSv",
+          "rationale": "Detects embolic complications — splenic infarcts, renal infarcts, septic pulmonary emboli (right-sided IE), cerebral emboli, and mycotic aneurysms.",
+          "india_context": "Splenic infarcts are common in IE with mitral/aortic valve vegetations. Brain CT/MRI for suspected neurological emboli.",
+          "special_notes": "Perform if embolic phenomena suspected. Include brain (non-contrast), chest, abdomen, and pelvis in one session.",
+          "contraindicated_if": ["severe renal failure", "contrast allergy"]
+        },
+        {
+          "modality": "FDG PET-CT",
+          "code": "PET-CT-FDG",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "8–12 mSv",
+          "rationale": "Particularly useful for prosthetic valve IE when echo is non-diagnostic. Detects periannular infection and embolic events. Part of updated Duke Criteria (2023).",
+          "india_context": "Available at AIIMS, Tata Memorial, and major PET centres. Reserve for prosthetic valve IE where echo is equivocal.",
+          "special_notes": "Should be performed >3 months post-valve surgery to allow FDG uptake from healing to subside.",
+          "contraindicated_if": ["poorly controlled diabetes (reduces sensitivity)", "recent surgery <3 months for prosthetic valve"]
+        }
+      ]
+    },
+    {
+      "id": "cardio-005",
+      "title": "Cardiac Mass / Left Ventricular Thrombus",
+      "clinical_conditions": ["cardiac mass", "left ventricular thrombus", "lv thrombus", "atrial myxoma", "cardiac tumour", "intracardiac thrombus", "cardiac fibroma"],
+      "symptoms": ["embolic stroke", "tia", "peripheral emboli", "palpitations", "dyspnoea", "constitutional symptoms", "fever", "weight loss", "systemic emboli"],
+      "tags": ["cardiac", "mass", "thrombus", "tumour", "myxoma", "embolism"],
+      "references": ["ACR AC Cardiac Mass", "ESC Valvular Guidelines", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "Echocardiography (TTE / TOE)",
+          "code": "ECHO-TTE-TOE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line for detecting intracardiac masses, thrombi, and tumours. TOE superior for left atrial appendage thrombus and posterior structures.",
+          "india_context": "LV thrombus common after large anterior STEMI. Atrial myxoma is the most common benign cardiac tumour globally and in India.",
+          "special_notes": "Contrast echo (agitated saline or ultrasound contrast) improves detection of apical thrombi. Myxoma: typically mobile, attached to interatrial septum.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Cardiac MRI",
+          "code": "MRI-CARDIAC",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Gold standard for tissue characterisation of cardiac masses — distinguishes thrombus (no enhancement) from tumour (enhancement). Identifies myxoma, fibroma, lipoma, and malignant tumours.",
+          "india_context": "Use when echo is inconclusive or to characterise mass before surgery.",
+          "special_notes": "T1: lipoma (bright), T2: myxoma (bright), LGE: tumour enhancement vs. no enhancement in thrombus.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "severe renal failure (gadolinium contraindicated)"]
+        },
+        {
+          "modality": "CT Cardiac",
+          "code": "CT-CARDIAC-CONTRAST",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–10 mSv",
+          "rationale": "Useful for delineating mass extent, calcification (fibroma), and coronary artery involvement prior to surgery.",
+          "india_context": "Available at cardiac centres. Complement to MRI when MRI is unavailable.",
+          "special_notes": null,
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        }
+      ]
+    },
+    {
+      "id": "cardio-006",
+      "title": "Suspected Aortic Dissection / Acute Aortic Syndrome",
+      "clinical_conditions": ["aortic dissection", "acute aortic syndrome", "intramural haematoma", "aortic aneurysm dissection", "type a dissection", "type b dissection", "stanford type a", "stanford type b"],
+      "symptoms": ["sudden tearing chest pain", "back pain", "ripping pain", "hypertension", "asymmetric blood pressure", "pulse deficit", "aortic regurgitation", "syncope", "limb ischaemia"],
+      "tags": ["aorta", "dissection", "emergency", "vascular", "aneurysm"],
+      "references": ["ESC Aortic Guidelines 2014", "ACC/AHA Thoracic Aorta Guidelines 2022", "ACR AC Aortic Dissection", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Aortogram (CTA Chest-Abdomen-Pelvis) — URGENT",
+          "code": "CTA-AORTA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "high",
+          "radiation_msv_range": "12–20 mSv",
+          "rationale": "Gold standard and most rapid investigation. Non-contrast + arterial + delayed phase gives complete evaluation of dissection flap, entry tear, extent, branch vessel involvement, and complications.",
+          "india_context": "Available at all major cardiac and trauma centres in India. Immediate CT is mandatory in suspected aortic dissection — delay increases mortality.",
+          "special_notes": "Non-contrast CT first (intramural haematoma), then arterial phase (flap and extent), then portal/delayed (branch vessel ischaemia). Classify as Stanford Type A (ascending, surgical emergency) or Type B (medical management).",
+          "contraindicated_if": ["severe contrast allergy (consider MRI if stable)", "haemodynamic instability (stabilise first or bedside echo)"]
+        },
+        {
+          "modality": "Chest X-Ray (AP/PA)",
+          "code": "CXR-PA",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.02 mSv",
+          "rationale": "Widened mediastinum (>8 cm), aortic knuckle prominence, or pleural effusion may raise suspicion. Sensitivity only 60–70% — does not exclude dissection.",
+          "india_context": "First investigation in emergency but must not delay CT. A normal CXR does not exclude dissection.",
+          "special_notes": "Mediastinal widening >8 cm, left pleural effusion, tracheal deviation are supportive features.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "Echocardiography (TOE – Transoesophageal)",
+          "code": "ECHO-TOE",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Excellent for detecting proximal aortic dissection, aortic regurgitation, pericardial effusion, and haemodynamic status in unstable patients.",
+          "india_context": "Useful when CT is unavailable or patient is too unstable for CT. Limited for descending aorta due to blind spot.",
+          "special_notes": "TOE has 98% sensitivity for Type A dissection. TTE less useful — use TOE.",
+          "contraindicated_if": ["oesophageal disease", "patient unable to cooperate"]
+        },
+        {
+          "modality": "MRI Aorta",
+          "code": "MRI-AORTA",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "High accuracy with no radiation. Ideal for chronic dissection follow-up or when CT contrast is contraindicated. Too slow for acute emergency.",
+          "india_context": "Reserve for follow-up imaging in stable patients or those with contrast allergy. Not suitable for acute emergency due to scan time.",
+          "special_notes": "Better for intramural haematoma characterisation. Not first-line in acute setting.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "acute haemodynamic instability"]
+        }
+      ]
+    }
+  ]
+}

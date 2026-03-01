@@ -1,0 +1,412 @@
+{
+  "version": "1.0",
+  "body_system": "neuro",
+  "source": "ICMR Guidelines + ACR Appropriateness Criteria (India-adapted)",
+  "last_updated": "2024-01-01",
+  "scenarios": [
+    {
+      "id": "neuro-001",
+      "title": "Suspected Acute Stroke",
+      "clinical_conditions": ["stroke", "acute stroke", "cerebrovascular accident", "cva", "tia", "transient ischaemic attack", "ischaemic stroke", "haemorrhagic stroke", "facial droop", "hemiplegia"],
+      "symptoms": ["sudden facial droop", "arm weakness", "speech difficulty", "sudden onset weakness", "hemiplegia", "hemiparesis", "dysphasia", "aphasia", "sudden headache", "sudden vision loss", "ataxia"],
+      "tags": ["neurology", "emergency", "stroke", "vascular", "brain"],
+      "references": ["ICMR Stroke Guidelines 2021", "AHA/ASA Stroke Guidelines 2019", "ACR AC Stroke 2022", "ESO Guidelines"],
+      "recommendations": [
+        {
+          "modality": "CT Brain (Non-contrast)",
+          "code": "CT-BRAIN-NON-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2 mSv",
+          "rationale": "Immediate first-line investigation. Rules out haemorrhagic stroke before thrombolysis. Detects ICH within minutes of onset.",
+          "india_context": "Mandatory before IV tPA administration. Available at all stroke-ready centres. FAST protocol — door to CT within 25 minutes.",
+          "special_notes": "Cannot reliably detect acute ischaemic stroke in first 6 hours. MRI diffusion is more sensitive.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Brain (DWI + FLAIR)",
+          "code": "MRI-BRAIN-DWI",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Most sensitive for acute ischaemic stroke — detects within 30 minutes of onset. DWI shows restricted diffusion. Essential for wake-up stroke and late presentation.",
+          "india_context": "Preferred when CT is inconclusive and time permits. Essential for posterior fossa strokes missed on CT.",
+          "special_notes": "DWI-FLAIR mismatch guides thrombolysis in unknown onset strokes.",
+          "contraindicated_if": ["pacemaker", "haemodynamic instability"]
+        },
+        {
+          "modality": "CT Angiography Brain & Neck (CTA)",
+          "code": "CTA-BRAIN-NECK",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–10 mSv",
+          "rationale": "Identifies large vessel occlusion (LVO) for mechanical thrombectomy decision. Detects dissection, aneurysm, severe stenosis.",
+          "india_context": "Perform alongside NCCT in thrombectomy-capable centres. LVO present in 25–30% of anterior circulation strokes.",
+          "special_notes": "ASPECTS score on NCCT and CTA together guide thrombectomy eligibility.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        },
+        {
+          "modality": "CT Perfusion (CTP)",
+          "code": "CT-PERFUSION",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–10 mSv",
+          "rationale": "Identifies ischaemic penumbra vs. core infarct. Guides thrombectomy in extended time window (6–24 hours, DAWN/DEFUSE criteria).",
+          "india_context": "Available at advanced stroke centres. Use in late-presenting patients (>6h) for thrombectomy selection.",
+          "special_notes": "Requires RAPID or similar software for automated analysis.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        },
+        {
+          "modality": "MRI Angiography (MRA) Brain & Neck",
+          "code": "MRA-BRAIN-NECK",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Non-contrast alternative to CTA for vessel assessment — dissection, stenosis, aneurysm.",
+          "india_context": "Use when CT contrast is contraindicated. Time-of-flight MRA available at most 1.5T MRI centres.",
+          "special_notes": null,
+          "contraindicated_if": ["pacemaker"]
+        }
+      ]
+    },
+    {
+      "id": "neuro-002",
+      "title": "Severe / Thunderclap Headache",
+      "clinical_conditions": ["thunderclap headache", "worst headache of life", "subarachnoid haemorrhage", "sah", "sudden severe headache", "sentinel headache"],
+      "symptoms": ["thunderclap headache", "worst headache of life", "sudden onset headache", "neck stiffness", "photophobia", "nausea", "vomiting", "LOC", "loss of consciousness"],
+      "tags": ["neurology", "emergency", "headache", "subarachnoid", "vascular"],
+      "references": ["ACR AC Headache 2022", "ICMR Neurology Guidelines", "NICE Headache Guidelines", "BNF Neurology"],
+      "recommendations": [
+        {
+          "modality": "CT Brain (Non-contrast)",
+          "code": "CT-BRAIN-NON-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2 mSv",
+          "rationale": "Immediate first-line for thunderclap headache to detect SAH. Sensitivity >90% in first 6 hours if read by experienced radiologist.",
+          "india_context": "Mandatory and urgent in all thunderclap headaches. Sensitivity drops to <50% after 24–48 hours.",
+          "special_notes": "If CT negative but SAH clinically suspected — proceed to LP for xanthochromia (>12h after headache onset).",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Angiography Brain (CTA)",
+          "code": "CTA-BRAIN",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–8 mSv",
+          "rationale": "Identifies aneurysm as source of SAH. Detects aneurysms >3 mm with high accuracy.",
+          "india_context": "Perform immediately after confirming SAH on NCCT. Guides neurosurgical or neurointerventional planning.",
+          "special_notes": "DSA (conventional angiography) is gold standard if CTA negative with confirmed SAH.",
+          "contraindicated_if": ["contrast allergy", "renal failure"]
+        },
+        {
+          "modality": "MRI Brain (FLAIR + T2*)",
+          "code": "MRI-BRAIN-FLAIR",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "More sensitive than CT for subacute SAH (>6h). FLAIR detects subarachnoid blood. T2* GRE/SWI detects haemorrhage.",
+          "india_context": "Use when CT inconclusive and LP not available or contraindicated.",
+          "special_notes": "FLAIR positive for SAH may persist for weeks — aids diagnosis in delayed presentations.",
+          "contraindicated_if": ["pacemaker"]
+        }
+      ]
+    },
+    {
+      "id": "neuro-003",
+      "title": "First Seizure in an Adult",
+      "clinical_conditions": ["first seizure", "new onset seizure", "adult epilepsy", "status epilepticus", "generalised tonic clonic", "focal seizure"],
+      "symptoms": ["seizure", "convulsion", "tonic clonic", "LOC", "post ictal confusion", "tongue bite", "urinary incontinence", "focal weakness"],
+      "tags": ["neurology", "seizure", "epilepsy", "brain"],
+      "references": ["ICMR Epilepsy Guidelines", "ILAE Guidelines", "ACR AC Seizure 2022", "NICE Epilepsy 2022"],
+      "recommendations": [
+        {
+          "modality": "MRI Brain (3T preferred, 1.5T acceptable)",
+          "code": "MRI-BRAIN-EPILEPSY",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Investigation of choice. Detects structural causes — tumour, hippocampal sclerosis, cortical dysplasia, cavernoma. Should include epilepsy protocol (FLAIR, T1, T2, DWI, T2*).",
+          "india_context": "All new onset seizures in adults require MRI. Epilepsy protocol sequences are essential.",
+          "special_notes": "Standard T1/T2 may miss subtle lesions. Request epilepsy protocol: FLAIR, coronal hippocampal cuts, T2*, DWI.",
+          "contraindicated_if": ["pacemaker"]
+        },
+        {
+          "modality": "CT Brain (Non-contrast)",
+          "code": "CT-BRAIN-NON-CONTRAST",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2 mSv",
+          "rationale": "Immediate investigation when MRI not available or patient unstable. Excludes haemorrhage, large mass, hydrocephalus.",
+          "india_context": "Perform urgently in first seizure. Proceed to MRI after initial CT if no acute finding.",
+          "special_notes": "CT misses most epileptogenic lesions seen on MRI. Always plan MRI follow-up.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Brain with contrast",
+          "code": "CT-BRAIN-CONTRAST",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2 mSv",
+          "rationale": "For suspected mass lesion with enhancement or CNS infection.",
+          "india_context": "Consider when neurocysticercosis (common in India) or brain abscess is suspected.",
+          "special_notes": "Neurocysticercosis is the most common cause of new onset seizures in adults in India. Ring-enhancing lesions.",
+          "contraindicated_if": ["contrast allergy"]
+        }
+      ]
+    },
+    {
+      "id": "neuro-004",
+      "title": "Head Trauma — Minor / Mild",
+      "clinical_conditions": ["head injury", "mild head injury", "concussion", "minor head trauma", "minor TBI"],
+      "symptoms": ["head trauma", "headache after trauma", "brief LOC", "confusion", "amnesia", "nausea after head injury", "GCS 13-15", "normal neurology"],
+      "tags": ["trauma", "neurology", "head injury", "emergency"],
+      "references": ["NICE Head Injury Guidelines 2023", "ICMR Trauma Guidelines", "ACR AC Head Trauma 2022", "PECARN Rule"],
+      "recommendations": [
+        {
+          "modality": "CT Brain (Non-contrast)",
+          "code": "CT-BRAIN-NON-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2 mSv",
+          "rationale": "Recommended based on clinical decision rules (NICE, PECARN, Canadian CT Head Rule). Identifies intracranial haemorrhage, skull fracture.",
+          "india_context": "Perform if any high-risk criteria: GCS <15, suspected open/depressed skull fracture, seizure, vomiting >1 time, age >65, anticoagulants, dangerous mechanism.",
+          "special_notes": "Canadian CT Head Rule: apply to GCS 13–15 with LOC/amnesia. PECARN for paediatric patients.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "X-Ray Skull",
+          "code": "XR-SKULL",
+          "rating": 2,
+          "appropriateness": "usually_not_appropriate",
+          "radiation_level": "minimal",
+          "radiation_msv_range": "0.1 mSv",
+          "rationale": "Does not detect intracranial injury. A normal skull X-ray does not exclude significant head injury.",
+          "india_context": "Skull X-ray has been superseded by CT. Do not use for acute head injury assessment.",
+          "special_notes": "Only acceptable if CT is unavailable — refer patient to CT-capable facility.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI Brain",
+          "code": "MRI-BRAIN",
+          "rating": 5,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "More sensitive than CT for DAI (diffuse axonal injury), brainstem injury, and subtle haemorrhage. Not practical in acute setting.",
+          "india_context": "Use for post-acute assessment when neurological symptoms persist despite normal CT.",
+          "special_notes": null,
+          "contraindicated_if": ["pacemaker", "metallic implants"]
+        }
+      ]
+    },
+    {
+      "id": "neuro-005",
+      "title": "Suspected Brain Tumour",
+      "clinical_conditions": ["brain tumour", "brain tumor", "intracranial mass", "cerebral mass", "glioma", "meningioma", "brain metastasis", "intracerebral mass"],
+      "symptoms": ["progressive headache", "focal neurological deficit", "new onset seizure", "personality change", "cognitive decline", "raised icp", "papilloedema", "vomiting morning headache"],
+      "tags": ["oncology", "neurology", "brain", "tumour", "mass"],
+      "references": ["ICMR Cancer Guidelines", "EANO Glioma Guidelines 2021", "ACR AC Brain Tumour 2022", "NICE Brain Tumour Guidelines"],
+      "recommendations": [
+        {
+          "modality": "MRI Brain with contrast (Gadolinium)",
+          "code": "MRI-BRAIN-CONTRAST",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Investigation of choice. Characterises tumour — location, size, oedema, enhancement pattern, multicentricity, leptomeningeal spread.",
+          "india_context": "All suspected brain tumours require MRI with gadolinium contrast. Include T1, T2, FLAIR, DWI, T1+contrast, MRS if available.",
+          "special_notes": "Advanced sequences: MR Spectroscopy for grading, perfusion for neovascularisation, functional MRI for eloquent cortex mapping pre-operatively.",
+          "contraindicated_if": ["pacemaker", "severe renal failure (gadolinium — risk of NSF)"]
+        },
+        {
+          "modality": "CT Brain with contrast",
+          "code": "CT-BRAIN-CONTRAST",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2–3 mSv",
+          "rationale": "Alternative when MRI unavailable or contraindicated. Identifies most tumours, haemorrhage, hydrocephalus, and midline shift.",
+          "india_context": "Interim investigation while arranging MRI. Proceed to MRI for complete characterisation.",
+          "special_notes": null,
+          "contraindicated_if": ["contrast allergy"]
+        },
+        {
+          "modality": "PET-CT",
+          "code": "PET-CT",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "high",
+          "radiation_msv_range": "14–25 mSv",
+          "rationale": "For differentiating tumour recurrence from radiation necrosis. Also for detecting systemic primary in brain metastasis workup.",
+          "india_context": "Use selectively. High cost. Primarily for post-treatment monitoring.",
+          "special_notes": "FDG-PET limited for brain (high background activity). Amino acid PET (FDOPA, MET) superior for gliomas — not widely available in India.",
+          "contraindicated_if": ["uncontrolled diabetes", "pregnancy"]
+        }
+      ]
+    },
+    {
+      "id": "neuro-006",
+      "title": "Cognitive Decline / Dementia Workup",
+      "clinical_conditions": ["dementia", "alzheimers disease", "vascular dementia", "cognitive decline", "mci", "mild cognitive impairment", "memory loss progressive"],
+      "symptoms": ["progressive memory loss", "cognitive decline", "behavioural changes", "disorientation", "word-finding difficulties", "personality change", "executive dysfunction", "activities of daily living decline"],
+      "tags": ["neuro", "dementia", "alzheimer", "cognitive", "memory", "elderly"],
+      "references": ["NICE Dementia Guidelines 2023", "ACR AC Dementia/Cognitive Impairment", "ICMR Geriatric Guidelines"],
+      "recommendations": [
+        {
+          "modality": "MRI Brain (structural, 1.5T or 3T)",
+          "code": "MRI-BRAIN-STRUCTURAL",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "First-line and most informative. Identifies hippocampal and medial temporal lobe atrophy (Alzheimer's), white matter ischaemia (vascular dementia), frontal/temporal atrophy (FTD), and reversible causes (tumour, SDH, NPH).",
+          "india_context": "Alzheimer's disease and vascular dementia are most common in India. Reversible causes (vitamin B12 deficiency, hypothyroidism — metabolic) must be excluded before imaging. MRI brain available at most district hospitals.",
+          "special_notes": "Medial temporal lobe atrophy (MTA) scale for Alzheimer's. White matter hyperintensities (Fazekas scale) for vascular dementia. Look for NPH triad (enlarged ventricles, tight sulci at vertex, wide Sylvian fissures).",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)", "severe claustrophobia"]
+        },
+        {
+          "modality": "CT Brain (Non-Contrast)",
+          "code": "NCCT-BRAIN",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2 mSv",
+          "rationale": "Acceptable alternative when MRI unavailable. Rules out structural causes (tumour, SDH, NPH, large infarcts) but less sensitive for hippocampal atrophy and white matter changes.",
+          "india_context": "Use when MRI is unavailable or contraindicated. Still identifies most reversible structural causes of cognitive decline.",
+          "special_notes": "NPH: Evans index >0.3 (ventricular size relative to brain width). Can identify large vessel disease and calcifications.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "FDG PET Brain",
+          "code": "PET-FDG-BRAIN",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "Shows characteristic hypometabolism patterns: parieto-temporal (Alzheimer's), frontotemporal (FTD), asymmetric frontoparietal (CBS). Differentiates dementia subtypes when structural MRI is equivocal.",
+          "india_context": "Available at AIIMS and major PET centres. Use when dementia type is unclear or atypical features present.",
+          "special_notes": "Alzheimer's: posterior cortical, precuneus, cingulate hypometabolism. FTD: frontal/anterior temporal hypometabolism.",
+          "contraindicated_if": ["uncontrolled diabetes", "pregnancy"]
+        },
+        {
+          "modality": "Amyloid PET (Florbetapir / Flutemetamol)",
+          "code": "PET-AMYLOID",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–7 mSv",
+          "rationale": "Directly detects amyloid plaques (Alzheimer's pathology). High negative predictive value — negative scan excludes Alzheimer's. Used in atypical or early-onset dementia.",
+          "india_context": "Very limited availability in India. Reserve for selected cases where AD diagnosis is uncertain and changes management.",
+          "special_notes": "A positive amyloid PET does not confirm AD (amyloid alone without tau is not sufficient). Combine with clinical assessment.",
+          "contraindicated_if": ["pregnancy"]
+        }
+      ]
+    },
+    {
+      "id": "neuro-007",
+      "title": "Spinal Cord Compression / Myelopathy",
+      "clinical_conditions": ["spinal cord compression", "myelopathy", "cervical myelopathy", "thoracic cord compression", "cauda equina syndrome", "metastatic spinal cord compression"],
+      "symptoms": ["progressive limb weakness", "spastic paraparesis", "sensory level", "bladder dysfunction", "bowel dysfunction", "gait disturbance", "Lhermitte sign", "upper motor neuron signs"],
+      "tags": ["spine", "myelopathy", "cord compression", "emergency", "paralysis"],
+      "references": ["NICE Metastatic Spinal Cord Compression Guidelines", "AAN Myelopathy Guidelines", "ACR AC Myelopathy", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "MRI Whole Spine (with contrast if malignancy suspected)",
+          "code": "MRI-WHOLE-SPINE",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Gold standard and mandatory in all suspected myelopathy. Identifies disc prolapse, ligamentum flavum hypertrophy, epidural metastasis, abscess, haematoma, and intrinsic cord pathology. Whole spine MRI is essential — multilevel disease is common.",
+          "india_context": "Cervical spondylotic myelopathy is the most common cause in India. Spinal tuberculosis (Pott's disease) is very prevalent — always consider when there is vertebral destruction and paraspinal abscess. MRI is mandatory — emergency if rapid progression.",
+          "special_notes": "EMERGENCY MRI when cauda equina syndrome is suspected (bilateral leg weakness, saddle anaesthesia, urinary retention/incontinence). Do not delay. Gadolinium essential if malignancy, infection, or inflammatory disease suspected.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional) — use CT myelogram instead"]
+        },
+        {
+          "modality": "CT Spine",
+          "code": "CT-SPINE",
+          "rating": 7,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–10 mSv",
+          "rationale": "For bony detail — fractures, ossification of posterior longitudinal ligament (OPLL), spinal stenosis measurement, and surgical planning. Complements MRI.",
+          "india_context": "OPLL is an important cause of cervical myelopathy in Indian patients. CT myelogram used when MRI is contraindicated (pacemaker).",
+          "special_notes": "CT myelography: intrathecal contrast injection + CT — used when MRI contraindicated. Highly accurate but invasive.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "CT Myelogram",
+          "code": "CT-MYELOGRAM",
+          "rating": 8,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "moderate",
+          "radiation_msv_range": "5–10 mSv",
+          "rationale": "Gold standard when MRI is contraindicated (cardiac pacemaker, MRI-incompatible implants). Intrathecal contrast delineates cord compression, nerve root sleeve defects, and block.",
+          "india_context": "Important alternative for patients with pacemakers. Requires lumbar puncture and intrathecal contrast.",
+          "special_notes": null,
+          "contraindicated_if": ["contrast allergy", "coagulopathy", "raised intracranial pressure"]
+        }
+      ]
+    },
+    {
+      "id": "neuro-008",
+      "title": "Vertigo / Suspected Posterior Fossa Pathology",
+      "clinical_conditions": ["vertigo", "vestibular neuritis", "bppv", "acoustic neuroma", "cerebellar infarct", "posterior fossa tumour", "labyrinthitis", "central vertigo"],
+      "symptoms": ["vertigo", "dizziness", "nystagmus", "unsteadiness", "hearing loss", "tinnitus", "gait ataxia", "cerebellar signs", "diplopia", "dysphagia", "facial numbness"],
+      "tags": ["neuro", "vertigo", "posterior fossa", "cerebellum", "acoustic neuroma", "ent"],
+      "references": ["AAN Vertigo Guidelines", "NICE Dizziness/Vertigo Guidelines", "ACR AC Vertigo", "ICMR Guidelines"],
+      "recommendations": [
+        {
+          "modality": "MRI Brain with contrast (including posterior fossa sequences)",
+          "code": "MRI-BRAIN-POSTERIOR-FOSSA",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Best modality for posterior fossa pathology. Identifies cerebellar/brainstem infarct, acoustic neuroma (CPA mass), demyelination, tumour. CT is blind to posterior fossa due to bone artefact.",
+          "india_context": "Central causes of vertigo (brainstem infarct, cerebellar haemorrhage) must be excluded early. Acoustic neuroma (Vestibular Schwannoma) presents with unilateral sensorineural hearing loss and vertigo.",
+          "special_notes": "Use thin slices through posterior fossa and IAC (internal auditory canal). FIESTA/CISS sequences for CPA angle. URGENT MRI if: gait ataxia, falls, central nystagmus (direction-changing), other neurological signs.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        },
+        {
+          "modality": "CT Brain (Non-Contrast)",
+          "code": "NCCT-BRAIN",
+          "rating": 6,
+          "appropriateness": "may_be_appropriate",
+          "radiation_level": "low",
+          "radiation_msv_range": "2 mSv",
+          "rationale": "Emergency use when MRI unavailable and acute cerebellar haemorrhage is suspected. Limited for posterior fossa — beam hardening artefact from petrous bone. Cannot diagnose small infarcts.",
+          "india_context": "Use only in emergency when haemorrhage must be excluded and MRI is unavailable.",
+          "special_notes": "CT is poor for posterior fossa. Acute cerebellar haemorrhage may be visible but small infarcts will be missed.",
+          "contraindicated_if": []
+        },
+        {
+          "modality": "MRI IAC (Internal Auditory Canal — FIESTA/CISS)",
+          "code": "MRI-IAC",
+          "rating": 9,
+          "appropriateness": "usually_appropriate",
+          "radiation_level": "none",
+          "radiation_msv_range": "0 mSv",
+          "rationale": "Dedicated MRI protocol for CPA/IAC masses (acoustic neuroma, meningioma). T2 FIESTA/CISS shows cranial nerves and inner ear structures with exquisite detail.",
+          "india_context": "Use when unilateral sensorineural hearing loss, pulsatile tinnitus, or asymmetric inner ear symptoms are present. Available at tertiary neurology centres.",
+          "special_notes": "Acoustic neuroma: T2 hypointense mass in IAC, enhancing on gadolinium. FIESTA shows VII and VIII nerve bundles separately.",
+          "contraindicated_if": ["pacemaker (non-MRI conditional)"]
+        }
+      ]
+    }
+  ]
+}

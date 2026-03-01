@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(pip3:*)",
+      "Bash(venv/bin/pip install:*)",
+      "Bash(venv/bin/python3:*)",
+      "Bash(curl:*)",
+      "Bash(chmod:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill -9 lsof -ti:3000)",
+      "Bash(xargs kill -9 lsof -ti:5173)",
+      "Bash(xargs kill -9 sleep 1 echo \"Ports cleared\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xargs kill:*)"
+    ]
+  }
+}
