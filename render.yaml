@@ -5,7 +5,7 @@ services:
     region: singapore          # Closest to India
     plan: free                 # Upgrade to 'starter' ($7/mo) for no sleep
     rootDir: backend
-        buildCommand: pip install --prefer-binary -r requirements.txt
+    buildCommand: pip install --prefer-binary -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: ANTHROPIC_API_KEY
