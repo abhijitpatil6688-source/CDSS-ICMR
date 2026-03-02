@@ -3,7 +3,7 @@ import { useMutation, useQuery } from '@tanstack/react-query'
 import {
   Search, Stethoscope, Brain, Zap, ChevronDown, ChevronUp,
   AlertCircle, BookOpen, Loader2, X, Info, Lightbulb,
-} from 'lucide-react'h
+} from 'lucide-react'
 import { clsx } from 'clsx'
 import { radiologyApi } from '../services/api'
 import type { BodySystem, RadiologyRequest, RadiologyResponse, GuidelineScenario } from '../types/radiology'
