@@ -3,7 +3,7 @@ import { useMutation, useQuery } from '@tanstack/react-query'
 import {
   Search, Stethoscope, Brain, Zap, ChevronDown, ChevronUp,
   AlertCircle, BookOpen, Loader2, X, Info, Lightbulb,
-} from 'lucide-react'
+} from 'lucide-react'h
 import { clsx } from 'clsx'
 import { radiologyApi } from '../services/api'
 import type { BodySystem, RadiologyRequest, RadiologyResponse, GuidelineScenario } from '../types/radiology'
@@ -219,11 +219,9 @@ export default function RadiologyAdvisor() {
 
   // Check if AI is available on mount
   useEffect(() => {
-    radiologyApi.getSystems().then(() =>
-      fetch('/api/v1/radiology/health').then(r => r.json()).then(d => setAiAvailable(d.ai_available))
-    ).catch(() => setAiAvailable(false))
+        radiologyApi.getHealth().then(d => setAiAvailable(d.ai_available)).catch(() => setAiAvailable(false))
   }, [])
-
+  
   const { data: symptomsData } = useQuery({ queryKey: ['symptoms'], queryFn: radiologyApi.getSymptoms })
   const { data: conditionsData } = useQuery({ queryKey: ['conditions'], queryFn: radiologyApi.getConditions })
 
