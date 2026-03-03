@@ -16,3 +16,16 @@ services:
         value: "false"
       - key: GUIDELINES_DIR
         value: guidelines/radiology
+
+  - type: web
+    name: cdss-icmr-frontend
+    env: static
+    region: singapore
+    plan: free
+    rootDir: web
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html   # SPA fallback for React Router
