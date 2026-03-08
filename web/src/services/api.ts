@@ -20,4 +20,8 @@ export const radiologyApi = {
 
   getConditions: (): Promise<{ conditions: string[] }> =>
     api.get('/radiology/conditions').then(r => r.data),
+
+    getHealth: (): Promise<{ status: string; ai_available: boolean }> =>
+          api.get('/radiology/health').then(r => r.data),
+  
 }
