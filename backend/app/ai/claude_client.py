@@ -6,12 +6,16 @@ Handles:
   3. Enriching recommendations with explanations
 """
 import json
+import re
 from typing import Optional
+import logging
 
 import anthropic
 
 from app.core.config import settings
 from app.models.radiology import AIInsight
+
+logger = logging.getLogger(__name__)
 
 
 EXTRACTION_SYSTEM_PROMPT = """You are a clinical decision support assistant helping Indian clinicians.
@@ -52,6 +56,24 @@ Generate a concise clinical insight commentary (3–5 sentences) that:
 Be direct, practical, and evidence-based. Write for a junior doctor at a district hospital level."""
 
 
+def _strip_json_markdown(raw: str) -> str:
+    """
+    Safely strip markdown fences and json markers from Claude's response.
+    Handles both triple backticks with 'json' marker and plain triple backticks.
+    """
+    # Remove leading/trailing whitespace
+    raw = raw.strip()
+    
+    # Handle markdown code fences: ```json ... ``` or ``` ... ```
+    if raw.startswith("```"):
+        # Find the closing backticks
+        match = re.search(r'^```(?:json)?\s*(.*?)\s*```$', raw, re.DOTALL)
+        if match:
+            raw = match.group(1).strip()
+    
+    return raw
+
+
 class ClaudeClient:
     def __init__(self):
         if not settings.ANTHROPIC_API_KEY:
@@ -63,7 +85,7 @@ class ClaudeClient:
     def is_available(self) -> bool:
         return self._client is not None
 
-    async def extract_clinical_info(self, clinical_notes: str) -> Optional[AIInsight]:
+    def extract_clinical_info(self, clinical_notes: str) -> Optional[AIInsight]:
         """Parse free-text clinical notes into structured clinical information."""
         if not self.is_available:
             return None
@@ -81,15 +103,14 @@ class ClaudeClient:
                 ],
             )
 
-            raw = response.content[0].text.strip()
-            # Strip potential markdown fences
-            if raw.startswith("```"):
-                raw = raw.split("```")[1]
-                if raw.startswith("json"):
-                    raw = raw[4:]
-                raw = raw.strip()
-
-            data = json.loads(raw)
+            raw = response.content[0].text
+            clean_json = _strip_json_markdown(raw)
+            
+            try:
+                data = json.loads(clean_json)
+            except json.JSONDecodeError as json_err:
+                logger.error(f"[Claude] JSON parsing failed: {json_err}. Raw response: {raw[:200]}")
+                return None
 
             return AIInsight(
                 extracted_symptoms=data.get("symptoms", []),
@@ -100,12 +121,15 @@ class ClaudeClient:
                 red_flags=data.get("red_flags", []),
             )
 
+        except anthropic.APIError as api_err:
+            logger.error(f"[Claude] API error during extraction: {api_err}")
+            return None
         except Exception as e:
             # Non-critical — return None, rule engine still runs
-            print(f"[Claude] Extraction failed: {e}")
+            logger.error(f"[Claude] Extraction failed unexpectedly: {type(e).__name__}: {e}")
             return None
 
-    async def generate_clinical_insight(
+    def generate_clinical_insight(
         self,
         clinical_notes: str,
         scenario_title: str,
@@ -133,8 +157,11 @@ class ClaudeClient:
 
             return response.content[0].text.strip()
 
+        except anthropic.APIError as api_err:
+            logger.error(f"[Claude] API error during insight generation: {api_err}")
+            return None
         except Exception as e:
-            print(f"[Claude] Insight generation failed: {e}")
+            logger.error(f"[Claude] Insight generation failed unexpectedly: {type(e).__name__}: {e}")
             return None
 
 
