@@ -54,7 +54,7 @@ async def get_recommendations(request: RadiologyRequest) -> RadiologyResponse:
     if request.clinical_notes:
         if request.use_ai_parsing and claude.is_available:
             # Primary path: Claude AI extraction
-            ai_insight = await claude.extract_clinical_info(request.clinical_notes)
+            ai_insight = claude.extract_clinical_info(request.clinical_notes)
             if ai_insight:
                 if not request.symptoms and ai_insight.extracted_symptoms:
                     request.symptoms = ai_insight.extracted_symptoms
